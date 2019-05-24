@@ -1,0 +1,1113 @@
+/home/yuning/.pyenv/versions/anaconda3-5.0.1/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+WARNING:tensorflow:Estimator's model_fn (<function model_fn_builder.<locals>.model_fn at 0x7f00e0094268>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Using config: {'_model_dir': '/mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': 1000, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': None, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f00d70707b8>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1, '_tpu_config': TPUConfig(iterations_per_loop=1000, num_shards=8, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None), '_cluster': None}
+INFO:tensorflow:_TPUContext: eval_on_tpu True
+WARNING:tensorflow:eval_on_tpu ignored because use_tpu is False.
+INFO:tensorflow:Writing example 0 of 3316
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: train-0
+INFO:tensorflow:tokens: [CLS] the minimal inhibitor ##y concentrations of 21 broad spectrum beta - la ##ct ##am anti ##biotics for five bacterial control strains , as determined by a micro ##tub ##e method in cat ##ion - supplemented m ##uel ##ler - hint ##on br ##oth , are reported . [SEP]
+INFO:tensorflow:input_ids: 101 1103 10298 27558 1183 14759 1104 1626 4728 10122 11933 118 2495 5822 2312 2848 25523 1111 1421 19560 1654 21116 117 1112 3552 1118 170 17599 25098 1162 3442 1107 5855 1988 118 22625 182 24741 2879 118 9124 1320 9304 12858 117 1132 2103 119 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: train-1
+INFO:tensorflow:tokens: [CLS] [SEP]
+INFO:tensorflow:input_ids: 101 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: train-2
+INFO:tensorflow:tokens: [CLS] et ##hn ##op ##har ##ma ##cological relevance : resistance to current anti ##ba ##cter ##ial drugs and the rise of op ##port ##uni ##stic fun ##gal infections are growing global concerns . traditional medicine is a potential source of new anti ##ba ##cter ##ial ##s and anti ##fu ##nga ##ls . c ##it ##ru ##llus co ##loc ##ynth ##is s ##ch ##rad . ( cu ##cu ##rb ##ita ##ceae ) endemic in southern t ##uni ##sia , is used in folk medicine against der ##mat ##ological , g ##yna ##ec ##ological and pulmonary infections . aim of study : to assess in v ##it ##ro anti ##ba ##cter ##ial and anti ##can ##di ##dal activity of a ##que ##ous and di ##lut ##ed ace ##tone extract ##s of c ##it ##ru ##llus co ##loc ##ynth ##is s ##ch ##rad . mi ##c and m ##b ##c / m ##f ##c were determined for plant organs at different mat ##uration stages . materials and methods : c ##it ##ru ##llus co ##loc ##ynth ##is s ##ch ##rad . was harvested and its identification was verified . a ##que ##ous and di ##lut ##ed ace ##tone extract ##s ( from the plant ' s roots , stems , leaves and three mat ##uration stages of its fruit and seeds ) were screened for activity against gram - negative and gram - positive bacteria ( es ##cher ##ichi ##a co ##li , other _ species , other _ species and ##oth ##er _ species ) - and various can ##di ##da s ##pp . ( can ##di ##da g ##la ##bra ##ta , can ##di ##da al ##bic ##ans , can ##di ##da para ##ps ##ilo ##sis and can ##di ##da k ##reus ##ei ) . results : all extract ##s showed activity against all strains . the highest mi ##cs and m ##b ##cs / m ##f ##cs were obtained from the fruit a ##que ##ous extract ##s ( mi ##c 0 . 10 ##m ##g / m ##l against can ##di ##da al ##bic ##ans and can ##di ##da g ##la ##bra ##ta , 0 . 20 ##m ##g / m ##l against ##oth ##er _ species and ##oth ##er _ species ) , lowest activity from the root extract ##s . conclusions : c ##it ##ru ##llus co ##loc ##ynth ##is s ##ch ##rad . shows anti ##ba ##cter ##ial and anti ##can ##di ##dal properties . the folk medicinal use as a broad - spectrum anti ##mic ##ro ##bial agent is valid ##ated . [SEP]
+INFO:tensorflow:input_ids: 101 3084 7272 4184 7111 1918 23388 25319 131 4789 1106 1954 2848 2822 25857 2916 5557 1105 1103 3606 1104 11769 4342 19782 5668 4106 6997 16565 1132 2898 4265 5365 119 2361 5182 1110 170 3209 2674 1104 1207 2848 2822 25857 2916 1116 1105 2848 14703 12253 3447 119 172 2875 5082 24960 1884 27089 26588 1548 188 1732 9871 119 113 16408 10182 26281 5168 8814 114 6850 1107 2359 189 19782 6370 117 1110 1215 1107 5191 5182 1222 4167 21943 7542 117 176 21880 10294 7542 1105 26600 16565 119 6457 1104 2025 131 1106 15187 1107 191 2875 2180 2848 2822 25857 2916 1105 2848 7804 3309 6919 3246 1104 170 3530 2285 1105 4267 25937 1174 20839 4793 16143 1116 1104 172 2875 5082 24960 1884 27089 26588 1548 188 1732 9871 119 1940 1665 1105 182 1830 1665 120 182 2087 1665 1127 3552 1111 2582 11932 1120 1472 22591 23022 5251 119 3881 1105 4069 131 172 2875 5082 24960 1884 27089 26588 1548 188 1732 9871 119 1108 25309 1105 1157 9117 1108 22480 119 170 3530 2285 1105 4267 25937 1174 20839 4793 16143 1116 113 1121 1103 2582 112 188 6176 117 12878 117 2972 1105 1210 22591 23022 5251 1104 1157 5735 1105 8365 114 1127 12468 1111 3246 1222 25968 118 4366 1105 25968 118 3112 10548 113 13936 6072 11985 1161 1884 2646 117 1168 168 1530 117 1168 168 1530 1105 12858 1200 168 1530 114 118 1105 1672 1169 3309 1810 188 8661 119 113 1169 3309 1810 176 1742 6766 1777 117 1169 3309 1810 2393 15421 5443 117 1169 3309 1810 18311 3491 24755 4863 1105 1169 3309 1810 180 27534 6851 114 119 2686 131 1155 16143 1116 2799 3246 1222 1155 21116 119 1103 2439 1940 6063 1105 182 1830 6063 120 182 2087 6063 1127 3836 1121 1103 5735 170 3530 2285 16143 1116 113 1940 1665 121 119 1275 1306 1403 120 182 1233 1222 1169 3309 1810 2393 15421 5443 1105 1169 3309 1810 176 1742 6766 1777 117 121 119 1406 1306 1403 120 182 1233 1222 12858 1200 168 1530 1105 12858 1200 168 1530 114 117 6905 3246 1121 1103 7261 16143 1116 119 16421 131 172 2875 5082 24960 1884 27089 26588 1548 188 1732 9871 119 2196 2848 2822 25857 2916 1105 2848 7804 3309 6919 4625 119 1103 5191 24712 1329 1112 170 4728 118 10122 2848 7257 2180 23467 3677 1110 9221 2913 119 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: train-3
+INFO:tensorflow:tokens: [CLS] objective : the aim of the present study was to investigate the most effective pro ##biotic combinations to prevent death and ne ##c ##rot ##izing enter ##oc ##oli ##tis ( ne ##c ) in a premature rat model . methods : one hundred fifty - eight premature s ##pra ##gue - da ##wley premature rats were enrolled . pro ##biotic strains bi ##fi ##do ##ba ##cter ##ium bi ##fi ##du ##m , b long ##um , la ##ct ##ob ##ac ##ill ##us acid ##op ##hil ##us , l plant ##aru ##m , and b br ##eve were fed as a single strain or mixture with 2 or 3 strains for a total of 9 study groups ; control groups received no ex ##ogen ##ous pro ##biotic supplement . f ##eca ##l samples were collected for 72 hours to detect pro ##biotic strains and path ##olo ##gic strains by real - time polymer ##ase chain reaction . colony counts of pro ##biotic strains es ##cher ##ichi ##a co ##li and k ##le ##bs ##iel ##la were compared between groups before and after 36 hours of the study period . the incidence of death and ne ##c were compared via fish ##er exact test between groups . results : the results demonstrated that l plant ##aru ##m alone ( p = 0 . 00 ##26 ) and b bi ##fi ##du ##m with b long ##um together ( p = 0 . 00 ##17 ) were more effective in reducing ne ##c as compared with the control group . all of the study groups except b br ##eve and b bi ##fi ##du ##m with b br ##eve definitely prevented death compared with controls . b bi ##fi ##du ##m and b long ##um together had significantly lower mortality than the control group ( p < 0 . 000 ##1 ) . colony counts of e co ##li and k ##le ##bs ##iel ##la in stool samples were significantly decreased in the b bi ##fi ##du ##m , b long ##um , and l plant ##aru ##m group compared with the other study and control groups after 36 hours . conclusions : administration of a mixture of pro ##biotic strains with b bi ##fi ##du ##m and b long ##um was most effective in preventing death and ne ##c in this animal model , and these observations provide an evidence - based strategy for designing further neon ##ata ##l clinical trials . [SEP]
+INFO:tensorflow:input_ids: 101 7649 131 1103 6457 1104 1103 1675 2025 1108 1106 8242 1103 1211 3903 5250 22400 16058 1106 3843 1473 1105 24928 1665 10595 4404 3873 13335 11014 6620 113 24928 1665 114 1107 170 24505 11631 2235 119 4069 131 1141 2937 5547 118 2022 24505 188 20488 7222 118 5358 21609 24505 13475 1127 7945 119 5250 22400 21116 16516 8702 2572 2822 25857 3656 16516 8702 7641 1306 117 171 1263 1818 117 2495 5822 12809 7409 7956 1361 5190 4184 20473 1361 117 181 2582 19131 1306 117 1105 171 9304 19907 1127 7672 1112 170 1423 10512 1137 7759 1114 123 1137 124 21116 1111 170 1703 1104 130 2025 2114 132 1654 2114 1460 1185 4252 19790 2285 5250 22400 15491 119 175 25534 1233 8025 1127 4465 1111 5117 2005 1106 11552 5250 22400 21116 1105 3507 12805 11007 21116 1118 1842 118 1159 21176 6530 4129 3943 119 6417 10664 1104 5250 22400 21116 13936 6072 11985 1161 1884 2646 1105 180 1513 4832 10387 1742 1127 3402 1206 2114 1196 1105 1170 3164 2005 1104 1103 2025 1669 119 1103 21014 1104 1473 1105 24928 1665 1127 3402 2258 3489 1200 6129 2774 1206 2114 119 2686 131 1103 2686 7160 1115 181 2582 19131 1306 2041 113 185 134 121 119 3135 25129 114 1105 171 16516 8702 7641 1306 1114 171 1263 1818 1487 113 185 134 121 119 3135 16770 114 1127 1167 3903 1107 7914 24928 1665 1112 3402 1114 1103 1654 1372 119 1155 1104 1103 2025 2114 2589 171 9304 19907 1105 171 16516 8702 7641 1306 1114 171 9304 19907 5397 8369 1473 3402 1114 7451 119 171 16516 8702 7641 1306 1105 171 1263 1818 1487 1125 5409 2211 14471 1190 1103 1654 1372 113 185 133 121 119 1288 1475 114 119 6417 10664 1104 174 1884 2646 1105 180 1513 4832 10387 1742 1107 15631 8025 1127 5409 10558 1107 1103 171 16516 8702 7641 1306 117 171 1263 1818 117 1105 181 2582 19131 1306 1372 3402 1114 1103 1168 2025 1105 1654 2114 1170 3164 2005 119 16421 131 3469 1104 170 7759 1104 5250 22400 21116 1114 171 16516 8702 7641 1306 1105 171 1263 1818 1108 1211 3903 1107 10878 1473 1105 24928 1665 1107 1142 3724 2235 117 1105 1292 9959 2194 1126 2554 118 1359 5564 1111 13795 1748 24762 6575 1233 7300 7356 119 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: train-4
+INFO:tensorflow:tokens: [CLS] telephone ##s can carry potential bacterial path ##ogen ##s , posing a risk for transfer of path ##ogen ##s to users ' hands . this study examined 25 mouth ##piece ##s of public telephone ##s at a large urban u . s . university located in an area of rising incidence of community - acquired s ##ta ##phy ##loc ##oc ##cal infections . co ##aga ##ula ##se - negative s ##ta ##phy ##loc ##oc ##ci were most commonly isolated ( 64 % of mouth ##piece ##s ) . potential path ##ogen ##s isolated included ##oth ##er _ species , van ##com ##y ##cin - susceptible enter ##oc ##oc ##cus , and ##oth ##er _ species . the efficacy of di ##sin ##fect ##ants on reducing bacterial counts on telephone mouth ##piece ##s was also investigated . s ##ta ##phy ##loc ##co ##cus au ##ren ##s , other _ species , and enter ##oc ##oc ##cus ##fa ##eca ##lis were in ##oc ##ulated onto mouth ##piece ##s and challenged with di ##sin ##fect ##ant wipe ##s . bacterial counts were reduced substantially for all three organisms by wipe ##s containing either 70 % is ##op ##rop ##yl alcohol , 1 . 84 % sodium h ##y ##po ##ch ##lor ##ite , or q ##uate ##rna ##ry am ##mon ##ium compounds . the sodium h ##y ##po ##ch ##lor ##ite - based cleaner demonstrated 100 % efficacy at removing or killing test organisms from telephone mouth ##piece ##s . these data suggest that tested cleaner ##s may be appropriate and needed for public telephone di ##sin ##fect ##ion . [SEP]
+INFO:tensorflow:input_ids: 101 7314 1116 1169 3564 3209 19560 3507 19790 1116 117 23614 170 3187 1111 4036 1104 3507 19790 1116 1106 4713 112 1493 119 1142 2025 8600 1512 1779 9641 1116 1104 1470 7314 1116 1120 170 1415 3953 190 119 188 119 2755 1388 1107 1126 1298 1104 4703 21014 1104 1661 118 2888 188 1777 22192 27089 13335 7867 16565 119 1884 15446 5886 2217 118 4366 188 1777 22192 27089 13335 6617 1127 1211 3337 6841 113 3324 110 1104 1779 9641 1116 114 119 3209 3507 19790 1116 6841 1529 12858 1200 168 1530 117 3498 8178 1183 16430 118 19464 3873 13335 13335 6697 117 1105 12858 1200 168 1530 119 1103 23891 1104 4267 10606 11916 7418 1113 7914 19560 10664 1113 7314 1779 9641 1116 1108 1145 10788 119 188 1777 22192 27089 2528 6697 12686 5123 1116 117 1168 168 1530 117 1105 3873 13335 13335 6697 8057 25534 6137 1127 1107 13335 8360 2135 1779 9641 1116 1105 7964 1114 4267 10606 11916 2861 14182 1116 119 19560 10664 1127 3549 12613 1111 1155 1210 12023 1118 14182 1116 4051 1719 3102 110 1110 4184 12736 7777 6272 117 122 119 5731 110 15059 177 1183 5674 1732 10885 3150 117 1137 186 20043 11782 1616 1821 7130 3656 10071 119 1103 15059 177 1183 5674 1732 10885 3150 118 1359 23722 7160 1620 110 23891 1120 9305 1137 3646 2774 12023 1121 7314 1779 9641 1116 119 1292 2233 5996 1115 7289 23722 1116 1336 1129 5806 1105 1834 1111 1470 7314 4267 10606 11916 1988 119 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:***** Running training *****
+INFO:tensorflow:  Num examples = 3316
+INFO:tensorflow:  Batch size = 4
+INFO:tensorflow:  Num steps = 12435
+WARNING:tensorflow:From /home/yuning/.pyenv/versions/anaconda3-5.0.1/lib/python3.6/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/yuning/Work/cs-273/src/ref/bert/run_classifier.py:550: map_and_batch (from tensorflow.contrib.data.python.ops.batching) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.map_and_batch(...)`.
+WARNING:tensorflow:From /home/yuning/Work/cs-273/src/ref/bert/run_classifier.py:530: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Running train on CPU
+INFO:tensorflow:*** Features ***
+INFO:tensorflow:  name = input_ids, shape = (4, 512)
+INFO:tensorflow:  name = input_mask, shape = (4, 512)
+INFO:tensorflow:  name = is_real_example, shape = (4,)
+INFO:tensorflow:  name = label_ids, shape = (4,)
+INFO:tensorflow:  name = segment_ids, shape = (4, 512)
+WARNING:tensorflow:From /home/yuning/Work/cs-273/src/ref/bert/modeling.py:358: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/yuning/Work/cs-273/src/ref/bert/modeling.py:671: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+INFO:tensorflow:**** Trainable Variables ****
+INFO:tensorflow:  name = bert/embeddings/word_embeddings:0, shape = (28996, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/token_type_embeddings:0, shape = (2, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/position_embeddings:0, shape = (512, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/pooler/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/pooler/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = output_weights:0, shape = (2, 768)
+INFO:tensorflow:  name = output_bias:0, shape = (2,)
+WARNING:tensorflow:From /home/yuning/.pyenv/versions/anaconda3-5.0.1/lib/python3.6/site-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-05-23 12:13:20.145113: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-23 12:13:20.427753: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-23 12:13:20.428304: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55a668dc1750 executing computations on platform CUDA. Devices:
+2019-05-23 12:13:20.428320: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce GTX 1080, Compute Capability 6.1
+2019-05-23 12:13:20.449496: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3792000000 Hz
+2019-05-23 12:13:20.450045: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55a6693a5130 executing computations on platform Host. Devices:
+2019-05-23 12:13:20.450069: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-23 12:13:20.450201: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:01:00.0
+totalMemory: 7.93GiB freeMemory: 7.82GiB
+2019-05-23 12:13:20.450215: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-23 12:13:20.450914: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-23 12:13:20.450929: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-23 12:13:20.450935: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-23 12:13:20.450999: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7604 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+2019-05-23 12:13:34.929871: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+INFO:tensorflow:global_step/sec: 1.98672
+INFO:tensorflow:examples/sec: 7.94687
+INFO:tensorflow:global_step/sec: 2.12815
+INFO:tensorflow:examples/sec: 8.51258
+INFO:tensorflow:global_step/sec: 2.12324
+INFO:tensorflow:examples/sec: 8.49297
+INFO:tensorflow:global_step/sec: 2.12039
+INFO:tensorflow:examples/sec: 8.48156
+INFO:tensorflow:global_step/sec: 2.11995
+INFO:tensorflow:examples/sec: 8.47979
+INFO:tensorflow:global_step/sec: 2.1189
+INFO:tensorflow:examples/sec: 8.47559
+INFO:tensorflow:global_step/sec: 2.11787
+INFO:tensorflow:examples/sec: 8.47148
+INFO:tensorflow:global_step/sec: 2.11758
+INFO:tensorflow:examples/sec: 8.47034
+INFO:tensorflow:global_step/sec: 2.1167
+INFO:tensorflow:examples/sec: 8.46682
+INFO:tensorflow:Saving checkpoints for 1000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.04332
+INFO:tensorflow:examples/sec: 8.17327
+INFO:tensorflow:global_step/sec: 2.11625
+INFO:tensorflow:examples/sec: 8.46501
+INFO:tensorflow:global_step/sec: 2.11572
+INFO:tensorflow:examples/sec: 8.46286
+INFO:tensorflow:global_step/sec: 2.11465
+INFO:tensorflow:examples/sec: 8.45859
+INFO:tensorflow:global_step/sec: 2.11412
+INFO:tensorflow:examples/sec: 8.45648
+INFO:tensorflow:global_step/sec: 2.1139
+INFO:tensorflow:examples/sec: 8.45561
+INFO:tensorflow:global_step/sec: 2.11365
+INFO:tensorflow:examples/sec: 8.45459
+INFO:tensorflow:global_step/sec: 2.1136
+INFO:tensorflow:examples/sec: 8.4544
+INFO:tensorflow:global_step/sec: 2.11431
+INFO:tensorflow:examples/sec: 8.45726
+INFO:tensorflow:global_step/sec: 2.11455
+INFO:tensorflow:examples/sec: 8.45821
+INFO:tensorflow:Saving checkpoints for 2000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.03967
+INFO:tensorflow:examples/sec: 8.15869
+INFO:tensorflow:global_step/sec: 2.11427
+INFO:tensorflow:examples/sec: 8.45707
+INFO:tensorflow:global_step/sec: 2.11351
+INFO:tensorflow:examples/sec: 8.45405
+INFO:tensorflow:global_step/sec: 2.11334
+INFO:tensorflow:examples/sec: 8.45337
+INFO:tensorflow:global_step/sec: 2.11259
+INFO:tensorflow:examples/sec: 8.45037
+INFO:tensorflow:global_step/sec: 2.11165
+INFO:tensorflow:examples/sec: 8.44659
+INFO:tensorflow:global_step/sec: 2.11141
+INFO:tensorflow:examples/sec: 8.44562
+INFO:tensorflow:global_step/sec: 2.1114
+INFO:tensorflow:examples/sec: 8.4456
+INFO:tensorflow:global_step/sec: 2.11104
+INFO:tensorflow:examples/sec: 8.44416
+INFO:tensorflow:global_step/sec: 2.11105
+INFO:tensorflow:examples/sec: 8.44419
+INFO:tensorflow:Saving checkpoints for 3000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.03584
+INFO:tensorflow:examples/sec: 8.14335
+INFO:tensorflow:global_step/sec: 2.11198
+INFO:tensorflow:examples/sec: 8.44792
+INFO:tensorflow:global_step/sec: 2.11192
+INFO:tensorflow:examples/sec: 8.44767
+INFO:tensorflow:global_step/sec: 2.11144
+INFO:tensorflow:examples/sec: 8.44575
+INFO:tensorflow:global_step/sec: 2.11107
+INFO:tensorflow:examples/sec: 8.44428
+INFO:tensorflow:global_step/sec: 2.11064
+INFO:tensorflow:examples/sec: 8.44258
+INFO:tensorflow:global_step/sec: 2.11087
+INFO:tensorflow:examples/sec: 8.44346
+INFO:tensorflow:global_step/sec: 2.11107
+INFO:tensorflow:examples/sec: 8.44428
+INFO:tensorflow:global_step/sec: 2.11115
+INFO:tensorflow:examples/sec: 8.44459
+INFO:tensorflow:global_step/sec: 2.11057
+INFO:tensorflow:examples/sec: 8.4423
+INFO:tensorflow:Saving checkpoints for 4000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.03645
+INFO:tensorflow:examples/sec: 8.14582
+INFO:tensorflow:global_step/sec: 2.11039
+INFO:tensorflow:examples/sec: 8.44156
+INFO:tensorflow:global_step/sec: 2.11112
+INFO:tensorflow:examples/sec: 8.44447
+INFO:tensorflow:global_step/sec: 2.11084
+INFO:tensorflow:examples/sec: 8.44335
+INFO:tensorflow:global_step/sec: 2.1114
+INFO:tensorflow:examples/sec: 8.44559
+INFO:tensorflow:global_step/sec: 2.11021
+INFO:tensorflow:examples/sec: 8.44085
+INFO:tensorflow:global_step/sec: 2.10964
+INFO:tensorflow:examples/sec: 8.43854
+INFO:tensorflow:global_step/sec: 2.1112
+INFO:tensorflow:examples/sec: 8.4448
+INFO:tensorflow:global_step/sec: 2.10965
+INFO:tensorflow:examples/sec: 8.43859
+INFO:tensorflow:global_step/sec: 2.10928
+INFO:tensorflow:examples/sec: 8.43711
+INFO:tensorflow:Saving checkpoints for 5000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+WARNING:tensorflow:From /home/yuning/.pyenv/versions/anaconda3-5.0.1/lib/python3.6/site-packages/tensorflow/python/training/saver.py:966: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+INFO:tensorflow:global_step/sec: 2.02908
+INFO:tensorflow:examples/sec: 8.11631
+INFO:tensorflow:global_step/sec: 2.1094
+INFO:tensorflow:examples/sec: 8.4376
+INFO:tensorflow:global_step/sec: 2.10932
+INFO:tensorflow:examples/sec: 8.43729
+INFO:tensorflow:global_step/sec: 2.10859
+INFO:tensorflow:examples/sec: 8.43436
+INFO:tensorflow:global_step/sec: 2.10855
+INFO:tensorflow:examples/sec: 8.43419
+INFO:tensorflow:global_step/sec: 2.10725
+INFO:tensorflow:examples/sec: 8.42901
+INFO:tensorflow:global_step/sec: 2.10649
+INFO:tensorflow:examples/sec: 8.42596
+INFO:tensorflow:global_step/sec: 2.10653
+INFO:tensorflow:examples/sec: 8.42612
+INFO:tensorflow:global_step/sec: 2.10678
+INFO:tensorflow:examples/sec: 8.42711
+INFO:tensorflow:global_step/sec: 2.10588
+INFO:tensorflow:examples/sec: 8.42353
+INFO:tensorflow:Saving checkpoints for 6000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.02822
+INFO:tensorflow:examples/sec: 8.11288
+INFO:tensorflow:global_step/sec: 2.10665
+INFO:tensorflow:examples/sec: 8.42662
+INFO:tensorflow:global_step/sec: 2.10534
+INFO:tensorflow:examples/sec: 8.42135
+INFO:tensorflow:global_step/sec: 2.10446
+INFO:tensorflow:examples/sec: 8.41785
+INFO:tensorflow:global_step/sec: 2.105
+INFO:tensorflow:examples/sec: 8.41999
+INFO:tensorflow:global_step/sec: 2.10518
+INFO:tensorflow:examples/sec: 8.42072
+INFO:tensorflow:global_step/sec: 2.10536
+INFO:tensorflow:examples/sec: 8.42144
+INFO:tensorflow:global_step/sec: 2.10436
+INFO:tensorflow:examples/sec: 8.41742
+INFO:tensorflow:global_step/sec: 2.10461
+INFO:tensorflow:examples/sec: 8.41842
+INFO:tensorflow:global_step/sec: 2.10438
+INFO:tensorflow:examples/sec: 8.4175
+INFO:tensorflow:Saving checkpoints for 7000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.02596
+INFO:tensorflow:examples/sec: 8.10382
+INFO:tensorflow:global_step/sec: 2.10439
+INFO:tensorflow:examples/sec: 8.41758
+INFO:tensorflow:global_step/sec: 2.10365
+INFO:tensorflow:examples/sec: 8.4146
+INFO:tensorflow:global_step/sec: 2.10399
+INFO:tensorflow:examples/sec: 8.41595
+INFO:tensorflow:global_step/sec: 2.10359
+INFO:tensorflow:examples/sec: 8.41436
+INFO:tensorflow:global_step/sec: 2.10445
+INFO:tensorflow:examples/sec: 8.41781
+INFO:tensorflow:global_step/sec: 2.10496
+INFO:tensorflow:examples/sec: 8.41985
+INFO:tensorflow:global_step/sec: 2.10413
+INFO:tensorflow:examples/sec: 8.41653
+INFO:tensorflow:global_step/sec: 2.10428
+INFO:tensorflow:examples/sec: 8.41712
+INFO:tensorflow:global_step/sec: 2.10422
+INFO:tensorflow:examples/sec: 8.4169
+INFO:tensorflow:Saving checkpoints for 8000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.03151
+INFO:tensorflow:examples/sec: 8.12603
+INFO:tensorflow:global_step/sec: 2.10684
+INFO:tensorflow:examples/sec: 8.42735
+INFO:tensorflow:global_step/sec: 2.10542
+INFO:tensorflow:examples/sec: 8.42169
+INFO:tensorflow:global_step/sec: 2.10513
+INFO:tensorflow:examples/sec: 8.42052
+INFO:tensorflow:global_step/sec: 2.10492
+INFO:tensorflow:examples/sec: 8.41968
+INFO:tensorflow:global_step/sec: 2.10483
+INFO:tensorflow:examples/sec: 8.41931
+INFO:tensorflow:global_step/sec: 2.10476
+INFO:tensorflow:examples/sec: 8.41905
+INFO:tensorflow:global_step/sec: 2.1046
+INFO:tensorflow:examples/sec: 8.41838
+INFO:tensorflow:global_step/sec: 2.10422
+INFO:tensorflow:examples/sec: 8.41689
+INFO:tensorflow:global_step/sec: 2.10377
+INFO:tensorflow:examples/sec: 8.41508
+INFO:tensorflow:Saving checkpoints for 9000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.02486
+INFO:tensorflow:examples/sec: 8.09943
+INFO:tensorflow:global_step/sec: 2.10424
+INFO:tensorflow:examples/sec: 8.41698
+INFO:tensorflow:global_step/sec: 2.10296
+INFO:tensorflow:examples/sec: 8.41182
+INFO:tensorflow:global_step/sec: 2.10326
+INFO:tensorflow:examples/sec: 8.41302
+INFO:tensorflow:global_step/sec: 2.10412
+INFO:tensorflow:examples/sec: 8.41648
+INFO:tensorflow:global_step/sec: 2.10439
+INFO:tensorflow:examples/sec: 8.41756
+INFO:tensorflow:global_step/sec: 2.1055
+INFO:tensorflow:examples/sec: 8.42199
+INFO:tensorflow:global_step/sec: 2.10516
+INFO:tensorflow:examples/sec: 8.42063
+INFO:tensorflow:global_step/sec: 2.10468
+INFO:tensorflow:examples/sec: 8.41872
+INFO:tensorflow:global_step/sec: 2.10486
+INFO:tensorflow:examples/sec: 8.41942
+INFO:tensorflow:Saving checkpoints for 10000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.02481
+INFO:tensorflow:examples/sec: 8.09926
+INFO:tensorflow:global_step/sec: 2.10461
+INFO:tensorflow:examples/sec: 8.41843
+INFO:tensorflow:global_step/sec: 2.10346
+INFO:tensorflow:examples/sec: 8.41385
+INFO:tensorflow:global_step/sec: 2.1042
+INFO:tensorflow:examples/sec: 8.4168
+INFO:tensorflow:global_step/sec: 2.10351
+INFO:tensorflow:examples/sec: 8.41404
+INFO:tensorflow:global_step/sec: 2.10376
+INFO:tensorflow:examples/sec: 8.41505
+INFO:tensorflow:global_step/sec: 2.10408
+INFO:tensorflow:examples/sec: 8.41631
+INFO:tensorflow:global_step/sec: 2.10293
+INFO:tensorflow:examples/sec: 8.41174
+INFO:tensorflow:global_step/sec: 2.10345
+INFO:tensorflow:examples/sec: 8.41382
+INFO:tensorflow:global_step/sec: 2.10349
+INFO:tensorflow:examples/sec: 8.41396
+INFO:tensorflow:Saving checkpoints for 11000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.02886
+INFO:tensorflow:examples/sec: 8.11545
+INFO:tensorflow:global_step/sec: 2.10441
+INFO:tensorflow:examples/sec: 8.41765
+INFO:tensorflow:global_step/sec: 2.10319
+INFO:tensorflow:examples/sec: 8.41274
+INFO:tensorflow:global_step/sec: 2.10252
+INFO:tensorflow:examples/sec: 8.41007
+INFO:tensorflow:global_step/sec: 2.10215
+INFO:tensorflow:examples/sec: 8.4086
+INFO:tensorflow:global_step/sec: 2.10196
+INFO:tensorflow:examples/sec: 8.40784
+INFO:tensorflow:global_step/sec: 2.10272
+INFO:tensorflow:examples/sec: 8.41088
+INFO:tensorflow:global_step/sec: 2.10274
+INFO:tensorflow:examples/sec: 8.41095
+INFO:tensorflow:global_step/sec: 2.10273
+INFO:tensorflow:examples/sec: 8.41093
+INFO:tensorflow:global_step/sec: 2.10322
+INFO:tensorflow:examples/sec: 8.41288
+INFO:tensorflow:Saving checkpoints for 12000 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:global_step/sec: 2.02423
+INFO:tensorflow:examples/sec: 8.09694
+INFO:tensorflow:global_step/sec: 2.10479
+INFO:tensorflow:examples/sec: 8.41914
+INFO:tensorflow:global_step/sec: 2.10465
+INFO:tensorflow:examples/sec: 8.41859
+INFO:tensorflow:global_step/sec: 2.10457
+INFO:tensorflow:examples/sec: 8.41826
+INFO:tensorflow:global_step/sec: 2.10469
+INFO:tensorflow:examples/sec: 8.41876
+INFO:tensorflow:Saving checkpoints for 12435 into /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0117235575.
+INFO:tensorflow:training_loop marked as finished
+INFO:tensorflow:Writing example 0 of 415
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: dev-0
+INFO:tensorflow:tokens: [CLS] heat - killed l . acid ##op ##hil ##us , strain lb , was tested for its ability to ad ##here in v ##it ##ro onto human enter ##oc ##yte - like ca ##co - 2 and m ##uc ##o - secret ##ing h ##t ##29 - m ##t ##x cells in culture . the heat - killed lb bacteria exhibited a high ad ##hesive property . a di ##ff ##use pattern of ad ##hesion was observed to the und ##iff ##ere ##nti ##ated cells , the a ##pical brush border of the enter ##oc ##ytic cells , and to the m ##uc ##us layer that covered the surface of the m ##uc ##us - secret ##ing cells . the inhibitor ##y effect of heat - killed lb organisms against the human in ##test ##inal ca ##co - 2 cell - ad ##hesion and cell - invasion by a large variety of di ##ar ##r ##hoe ##age ##nic bacteria was investigated . the following dose - dependent in ##hibition ##s were obtained : ( i ) against the cell - association of enter ##oto ##xi ##genic , di ##ff ##use ##ly - ad ##hering and enter ##op ##ath ##ogenic es ##cher ##ichi ##a co ##li , list ##eria mon ##oc ##yt ##ogen ##es , yer ##sin ##ia pseudo ##tub ##er ##cu ##los ##is , and salmon ##ella t ##y ##phi ##mu ##rium ; ( ii ) against the cell - invasion by enter ##op ##ath ##ogenic es ##cher ##ichi ##a co ##li , yer ##sin ##ia pseudo ##tub ##er ##cu ##los ##is , list ##eria mon ##oc ##yt ##ogen ##es and salmon ##ella t ##y ##phi ##mu ##rium . [SEP]
+INFO:tensorflow:input_ids: 101 3208 118 1841 181 119 5190 4184 20473 1361 117 10512 5682 117 1108 7289 1111 1157 2912 1106 8050 12807 1107 191 2875 2180 2135 1769 3873 13335 14300 118 1176 11019 2528 118 123 1105 182 21977 1186 118 3318 1158 177 1204 26752 118 182 1204 1775 3652 1107 2754 119 1103 3208 118 1841 5682 10548 7799 170 1344 8050 23838 2400 119 170 4267 3101 5613 4844 1104 8050 23746 1108 4379 1106 1103 5576 11093 9014 14964 2913 3652 117 1103 170 15328 8415 3070 1104 1103 3873 13335 23894 3652 117 1105 1106 1103 182 21977 1361 6440 1115 2262 1103 2473 1104 1103 182 21977 1361 118 3318 1158 3652 119 1103 27558 1183 2629 1104 3208 118 1841 5682 12023 1222 1103 1769 1107 13053 14196 11019 2528 118 123 2765 118 8050 23746 1105 2765 118 4923 1118 170 1415 2783 1104 4267 1813 1197 10061 2553 7770 10548 1108 10788 119 1103 1378 13753 118 7449 1107 16485 1116 1127 3836 131 113 178 114 1222 1103 2765 118 3852 1104 3873 12355 8745 19438 117 4267 3101 5613 1193 118 8050 23341 1105 3873 4184 9779 17960 13936 6072 11985 1161 1884 2646 117 2190 16386 19863 13335 25669 19790 1279 117 27497 10606 1465 23563 25098 1200 10182 8867 1548 117 1105 17646 7772 189 1183 27008 13601 11077 132 113 25550 114 1222 1103 2765 118 4923 1118 3873 4184 9779 17960 13936 6072 11985 1161 1884 2646 117 27497 10606 1465 23563 25098 1200 10182 8867 1548 117 2190 16386 19863 13335 25669 19790 1279 1105 17646 7772 189 1183 27008 13601 11077 119 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: dev-1
+INFO:tensorflow:tokens: [CLS] the aim of this research was to monitor the survival during re ##f ##rig ##erated storage of la ##ct ##ob ##ac ##ill ##us acid ##op ##hil ##us la - 5 ( a ) , bi ##fi ##do ##ba ##cter ##ium animal ##is s ##sp . la ##ct ##is b ##b - 12 ( b ) , and s ##tre ##pt ##oc ##oc ##cus the ##rm ##op ##hil ##us ch ##cc 74 ##2 / 213 ##0 ( t ) in culture ##d dairy foods made from came ##l and , for comparison , cow milk ##s supplemented with black lo ##cus ##t ( robin ##ia pseudo ##aca ##cia l . ) honey and f ##er ##mented by an acid ##op ##hil ##us - bi ##fi ##dus - the ##rm ##op ##hil ##us ( a ##bt ) - type culture . two liter ##s of d ##rome ##dar ##y came ##l milk and 2 l of cow milk were heated to 90 degrees c and held for 10 min , then cooled to 40 degrees c . one half of both types of milk was fortified with black lo ##cus ##t honey at the rate of 5 . 0 % ( w ##t / vol ) , whereas the other half was devoid of honey and served as a control . the came ##l and cow milk ##s with and without honey were subsequently in ##oc ##ulated with a ##bt - 5 culture and were f ##er ##mented at 37 degrees c until a p ##h value of 4 . 6 was reached . thereafter , the pro ##biotic f ##er ##mented milk ##s were cooled to 15 degrees c in ice water and were each separated into 18 fraction ##s that were transferred in s ##ter ##ile , tightly capped cent ##ri ##fu ##ge tubes . after 24 h of cooling at 8 degrees c ( d 0 ) , the samples were stored at re ##f ##rig ##eration temperature ( 4 degrees c ) . three tubes of all 4 products ( i . e . , f ##er ##mented came ##l and cow milk ##s with and without honey ) were taken at each sampling time ( i . e . , following 0 , 7 , 14 , 21 , 28 , and 35 d of storage ) , and the counts of characteristic micro ##or ##gan ##isms and those of certain s ##po ##ila ##ge micro ##bes ( yeast ##s , mold ##s , co ##li ##form ##s , es ##cher ##ichi ##a co ##li ) were en ##ume ##rated . the entire experimental program was repeated twice . the results showed that addition of black lo ##cus ##t honey at 5 % to heat - treated came ##l and cow milk ##s did not influence the growth and survival of starter s ##tre ##pt ##oc ##oc ##ci during production and subsequent re ##f ##rig ##erated storage of f ##er ##mented a ##bt milk ##s . in contrast , honey improved retention of via ##bility of b [SEP]
+INFO:tensorflow:input_ids: 101 1103 6457 1104 1142 1844 1108 1106 8804 1103 8115 1219 1231 2087 17305 20725 5092 1104 2495 5822 12809 7409 7956 1361 5190 4184 20473 1361 2495 118 126 113 170 114 117 16516 8702 2572 2822 25857 3656 3724 1548 188 20080 119 2495 5822 1548 171 1830 118 1367 113 171 114 117 1105 188 7877 6451 13335 13335 6697 1103 9019 4184 20473 1361 22572 19515 5692 1477 120 21640 1568 113 189 114 1107 2754 1181 14874 11785 1189 1121 1338 1233 1105 117 1111 7577 117 13991 6831 1116 22625 1114 1602 25338 6697 1204 113 16763 1465 23563 16604 6052 181 119 114 8531 1105 175 1200 24674 1118 1126 5190 4184 20473 1361 118 16516 8702 15307 118 1103 9019 4184 20473 1361 113 170 21238 114 118 2076 2754 119 1160 27146 1116 1104 173 11457 7858 1183 1338 1233 6831 1105 123 181 1104 13991 6831 1127 9511 1106 3078 4842 172 1105 1316 1111 1275 11241 117 1173 13289 1106 1969 4842 172 119 1141 1544 1104 1241 3322 1104 6831 1108 14149 1114 1602 25338 6697 1204 8531 1120 1103 2603 1104 126 119 121 110 113 192 1204 120 10857 114 117 6142 1103 1168 1544 1108 25755 1104 8531 1105 1462 1112 170 1654 119 1103 1338 1233 1105 13991 6831 1116 1114 1105 1443 8531 1127 2886 1107 13335 8360 1114 170 21238 118 126 2754 1105 1127 175 1200 24674 1120 3413 4842 172 1235 170 185 1324 2860 1104 125 119 127 1108 1680 119 7321 117 1103 5250 22400 175 1200 24674 6831 1116 1127 13289 1106 1405 4842 172 1107 2854 1447 1105 1127 1296 4757 1154 1407 13394 1116 1115 1127 3175 1107 188 2083 4759 117 6852 14510 9848 2047 14703 2176 11182 119 1170 1572 177 1104 12147 1120 129 4842 172 113 173 121 114 117 1103 8025 1127 7905 1120 1231 2087 17305 17166 4143 113 125 4842 172 114 119 1210 11182 1104 1155 125 2982 113 178 119 174 119 117 175 1200 24674 1338 1233 1105 13991 6831 1116 1114 1105 1443 8531 114 1127 1678 1120 1296 18200 1159 113 178 119 174 119 117 1378 121 117 128 117 1489 117 1626 117 1743 117 1105 2588 173 1104 5092 114 117 1105 1103 10664 1104 7987 17599 1766 3820 16762 1105 1343 1104 2218 188 5674 8009 2176 17599 12866 113 25693 1116 117 21532 1116 117 1884 2646 13199 1116 117 13936 6072 11985 1161 1884 2646 114 1127 4035 15447 5894 119 1103 2072 6700 1788 1108 4892 3059 119 1103 2686 2799 1115 1901 1104 1602 25338 6697 1204 8531 1120 126 110 1106 3208 118 5165 1338 1233 1105 13991 6831 1116 1225 1136 2933 1103 3213 1105 8115 1104 12302 188 7877 6451 13335 13335 6617 1219 1707 1105 4194 1231 2087 17305 20725 5092 1104 175 1200 24674 170 21238 6831 1116 119 1107 5014 117 8531 4725 23406 1104 2258 5474 1104 171 102
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: dev-2
+INFO:tensorflow:tokens: [CLS] hands are among the principal vehicles for transfer of no ##so ##com ##ial path ##ogen ##s in hospitals . often , outbreak ##s of infection are thought to be caused by a lack of compliance with hand ##wash ##ing guidelines , rather than due to the in ##ade ##qua ##cy of the hand ##wash ##ing agents used . in this study the effectiveness of proper hand ##wash ##ing and the use of three different hand di ##sin ##fect ##ants : ethanol 70 % ( e ) , is ##op ##rop ##ano ##l 40 % ( i ) and alcoholic ch ##lor ##he ##xi ##dine ( 70 % ) ( a ##c ) was compared using three volunteers whose fingertips were heavily contaminated with a succession of bacteria including : other _ species , other _ species , other _ species and ##oth ##er _ species . after each contamination , thorough hand ##wash ##ing and application of one di ##sin ##fect ##ant on the hands were performed three times . finger ##print - samples were taken before and 1 min after application of the di ##sin ##fect ##ants . thorough hand ##wash ##ing with an ordinary liquid soap ( ' s ##ter ##is ##ol ' ) did not reduce the con ##f ##lue ##nt growth of bacteria on fingertips for any of the species used ( 197 examinations ) . only a ##c had a significant effect on fingers heavily contaminated with ##oth ##er _ species ( 126 examinations ; a ##c compared with e and i ; p less than 0 . 000 ##2 and p less than 0 . 000 ##2 respectively ) , but did not completely era ##dicate the bacteria . after contamination with en ##t . c ##lo ##aca ##e ( 118 examinations ) , none of the three agents were particularly effective , but e and a ##c seemed to be somewhat more effective than i ( p less than 0 . 000 ##2 and p less than 0 . 01 respectively ) . when successive contamination was performed using all bacterial species , a ##c was the most effective de ##con ##tam ##ina ##nt . however , en ##t . c ##lo ##aca ##e was still present on the fingertips after 15 repeated courses of hand ##wash ##ing and applications of di ##sin ##fect ##ants . bathing of hands in a ##c for 20 ##s completely era ##dicated all bacteria from the hands . the study demonstrates that , when heavily contaminated , an ordinary hand ##wash ##ing followed by di ##sin ##fect ##ants is not enough to era ##dicate potentially path ##ogenic bacteria from the hands . [SEP]
+INFO:tensorflow:input_ids: 101 1493 1132 1621 1103 3981 4011 1111 4036 1104 1185 7301 8178 2916 3507 19790 1116 1107 8894 119 1510 117 8010 1116 1104 8974 1132 1354 1106 1129 2416 1118 170 2960 1104 14037 1114 1289 24745 1158 13112 117 1897 1190 1496 1106 1103 1107 6397 13284 3457 1104 1103 1289 24745 1158 5789 1215 119 1107 1142 2025 1103 12949 1104 4778 1289 24745 1158 1105 1103 1329 1104 1210 1472 1289 4267 10606 11916 7418 131 27236 3102 110 113 174 114 117 1110 4184 12736 7428 1233 1969 110 113 178 114 1105 16149 22572 10885 4638 8745 10399 113 3102 110 114 113 170 1665 114 1108 3402 1606 1210 8118 2133 12441 1127 3777 21636 1114 170 8705 1104 10548 1259 131 1168 168 1530 117 1168 168 1530 117 1168 168 1530 1105 12858 1200 168 1530 119 1170 1296 20908 117 17213 1289 24745 1158 1105 4048 1104 1141 4267 10606 11916 2861 1113 1103 1493 1127 1982 1210 1551 119 3602 10988 118 8025 1127 1678 1196 1105 122 11241 1170 4048 1104 1103 4267 10606 11916 7418 119 17213 1289 24745 1158 1114 1126 6655 6161 8439 113 112 188 2083 1548 4063 112 114 1225 1136 4851 1103 14255 2087 19224 2227 3213 1104 10548 1113 12441 1111 1251 1104 1103 1530 1215 113 21764 17865 114 119 1178 170 1665 1125 170 2418 2629 1113 2220 3777 21636 1114 12858 1200 168 1530 113 14491 17865 132 170 1665 3402 1114 174 1105 178 132 185 1750 1190 121 119 1288 1477 1105 185 1750 1190 121 119 1288 1477 3569 114 117 1133 1225 1136 2423 3386 12892 1103 10548 119 1170 20908 1114 4035 1204 119 172 2858 16604 1162 113 13176 17865 114 117 3839 1104 1103 1210 5789 1127 2521 3903 117 1133 174 1105 170 1665 1882 1106 1129 4742 1167 3903 1190 178 113 185 1750 1190 121 119 1288 1477 1105 185 1750 1190 121 119 5187 3569 114 119 1165 11598 20908 1108 1982 1606 1155 19560 1530 117 170 1665 1108 1103 1211 3903 1260 7235 20284 2983 2227 119 1649 117 4035 1204 119 172 2858 16604 1162 1108 1253 1675 1113 1103 12441 1170 1405 4892 4770 1104 1289 24745 1158 1105 4683 1104 4267 10606 11916 7418 119 19971 1104 1493 1107 170 1665 1111 1406 1116 2423 3386 17681 1155 10548 1121 1103 1493 119 1103 2025 17798 1115 117 1165 3777 21636 117 1126 6655 1289 24745 1158 1723 1118 4267 10606 11916 7418 1110 1136 1536 1106 3386 12892 9046 3507 17960 10548 1121 1103 1493 119 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: dev-3
+INFO:tensorflow:tokens: [CLS] we have examined case records for patients who received te ##ico ##p ##lani ##n alone for end ##oc ##ard ##itis or ##oth ##er _ species b ##act ##era ##emia . all patients with s ##tre ##pt ##oc ##oc ##cal end ##oc ##ard ##itis were cured ( v ##iri ##dan ##s group 14 / 14 ; group d 4 / 4 ) . cure rates for other organisms were : other _ species 3 / 5 ; other _ species 5 / 10 and co ##agu ##lase negative s ##ta ##phy ##loc ##oc ##ci 2 / 3 . doses for six patients who failed because of poor response were 3 . 3 - 4 . 2 mg / kg . te ##ico ##p ##lani ##n treatment cured 41 / 48 patients with ##oth ##er _ species b ##act ##era ##emia ; treatment failed in two patients because of adverse events . doses in the remaining treatment failures were 2 . 1 - 5 . 0 mg / kg . in comparison , 48 patients in du ##nde ##e hospitals received ten different drugs in 20 combinations for ##oth ##er _ species b ##act ##era ##emia ; 29 patients received c ##lo ##xa ##ci ##llin or flu ##c ##lo ##xa ##ci ##llin but initial doses varied from 0 . 25 - 2 . 0 g . we conclude that the euro ##pe ##an database does provide evidence that te ##ico ##p ##lani ##n mon ##otherapy is effective for serious infection with gram - positive bacteria . doses for s ##ta ##phy ##loc ##oc ##cal infection should probably be at least 6 mg / kg . the upper limit of the te ##ico ##p ##lani ##n dos ##age range remains to be determined but there is evidently considerable confusion about appropriate regime ##ns for ' standard ' therapy . [SEP]
+INFO:tensorflow:input_ids: 101 1195 1138 8600 1692 3002 1111 4420 1150 1460 21359 10658 1643 21690 1179 2041 1111 1322 13335 2881 10721 1137 12858 1200 168 1530 171 11179 5970 20504 119 1155 4420 1114 188 7877 6451 13335 13335 7867 1322 13335 2881 10721 1127 24265 113 191 17262 6778 1116 1372 1489 120 1489 132 1372 173 125 120 125 114 119 11200 5600 1111 1168 12023 1127 131 1168 168 1530 124 120 126 132 1168 168 1530 126 120 1275 1105 1884 28026 26572 4366 188 1777 22192 27089 13335 6617 123 120 124 119 24429 1111 1565 4420 1150 2604 1272 1104 2869 2593 1127 124 119 124 118 125 119 123 17713 120 4023 119 21359 10658 1643 21690 1179 3252 24265 3746 120 3615 4420 1114 12858 1200 168 1530 171 11179 5970 20504 132 3252 2604 1107 1160 4420 1272 1104 16798 1958 119 24429 1107 1103 2735 3252 16676 1127 123 119 122 118 126 119 121 17713 120 4023 119 1107 7577 117 3615 4420 1107 3840 11131 1162 8894 1460 1995 1472 5557 1107 1406 16058 1111 12858 1200 168 1530 171 11179 5970 20504 132 1853 4420 1460 172 2858 20192 6617 23824 1137 23896 1665 2858 20192 6617 23824 1133 3288 24429 9177 1121 121 119 1512 118 123 119 121 176 119 1195 17581 1115 1103 27772 3186 1389 8539 1674 2194 2554 1115 21359 10658 1643 21690 1179 19863 20939 1110 3903 1111 3021 8974 1114 25968 118 3112 10548 119 24429 1111 188 1777 22192 27089 13335 7867 8974 1431 1930 1129 1120 1655 127 17713 120 4023 119 1103 3105 5310 1104 1103 21359 10658 1643 21690 1179 18463 2553 2079 2606 1106 1129 3552 1133 1175 1110 20178 5602 6406 1164 5806 6716 2316 1111 112 2530 112 7606 119 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: dev-4
+INFO:tensorflow:tokens: [CLS] su ##l ##ba ##ct ##am / c ##ef ##oper ##az ##one ( s ##bt / c ##p ##z ) have been used in clinical in ##fusion at ratios of 1 : 1 and 1 : 2 in j ##apa ##n and u . s . a . , respectively . after an administration of these drugs as a 1 : 1 parent ##eral formulation , the ratio of levels of c ##p ##z and s ##bt in blood was 1 : 1 / 4 to 1 : 1 / 5 for 1 to 2 hours , whereas the ratio of free , un ##bound drug levels was 1 : 1 . 4 to 1 : 1 . 5 . in urine these drugs were ex ##cre ##ted at a ratio between 1 : 1 and 1 : 4 during 6 hours after the in ##fusion . anti ##mic ##ro ##bial interaction studies using various combinations of c ##p ##z and s ##bt were performed to obtain information with respect to the effect of s ##bt on the anti ##mic ##ro ##bial activity of c ##p ##z in v ##ivo and the most appropriate ratio of these drugs for the in v ##it ##ro test system . anti ##mic ##ro ##bial activities were determined using the a ##gar di ##lution method and the disk diffusion su ##s ##ce ##pt ##ibility test . s ##bt increased the activity of c ##p ##z against various clinical is ##olate ##s tested except ##oth ##er _ species . c ##p ##z - s ##bt at a fixed ratio of 1 : 1 / 5 significantly increased the anti ##mic ##ro ##bial activity of c ##p ##z , resulting in decreases in mi ##c values and increases in disk inhibitor ##y zone diameter ##s . these drugs at ratios 1 : 1 to 1 : 3 ma ##xi ##mized the s ##yne ##rg ##istic enhance ##ment of the activity . therefore , a fixed ratio between 1 : 1 / 5 and 1 : 1 would be appropriate for the in v ##it ##ro anti ##mic ##ro ##bial test system using either the a ##gar di ##lution method or the disk su ##s ##ce ##pt ##ibility test . based on p ##har ##ma ##co ##kin ##etic data for c ##p ##z and s ##bt , results of the present study on anti ##mic ##ro ##bial activity would support that the parent ##eral formulation of c ##p ##z - s ##bt at the fixed ratios of 1 : 1 and 2 : 1 for the in ##tra ##ven ##ous in ##fusion used in j ##apa ##n and u . s . a . , respectively , are appropriate . the effect of s ##bt on the activity of c ##p ##z was more marked against clinical is ##olate ##s with greater production abilities of beta - la ##ct ##ama ##se than against those with less production abilities . s ##bt / c ##p ##z , however , ex ##ert ##ed a s ##yne ##rg ##istic effect against [SEP]
+INFO:tensorflow:input_ids: 101 28117 1233 2822 5822 2312 120 172 11470 19807 10961 4798 113 188 21238 120 172 1643 1584 114 1138 1151 1215 1107 7300 1107 17149 1120 24576 1104 122 131 122 1105 122 131 123 1107 179 26519 1179 1105 190 119 188 119 170 119 117 3569 119 1170 1126 3469 1104 1292 5557 1112 170 122 131 122 6486 21716 22661 117 1103 6022 1104 3001 1104 172 1643 1584 1105 188 21238 1107 1892 1108 122 131 122 120 125 1106 122 131 122 120 126 1111 122 1106 123 2005 117 6142 1103 6022 1104 1714 117 8362 8346 3850 3001 1108 122 131 122 119 125 1106 122 131 122 119 126 119 1107 19968 1292 5557 1127 4252 13782 1906 1120 170 6022 1206 122 131 122 1105 122 131 125 1219 127 2005 1170 1103 1107 17149 119 2848 7257 2180 23467 8234 2527 1606 1672 16058 1104 172 1643 1584 1105 188 21238 1127 1982 1106 6268 1869 1114 4161 1106 1103 2629 1104 188 21238 1113 1103 2848 7257 2180 23467 3246 1104 172 1643 1584 1107 191 15435 1105 1103 1211 5806 6022 1104 1292 5557 1111 1103 1107 191 2875 2180 2774 1449 119 2848 7257 2180 23467 2619 1127 3552 1606 1103 170 5526 4267 18404 3442 1105 1103 10437 22873 28117 1116 2093 6451 7706 2774 119 188 21238 2569 1103 3246 1104 172 1643 1584 1222 1672 7300 1110 14995 1116 7289 2589 12858 1200 168 1530 119 172 1643 1584 118 188 21238 1120 170 4275 6022 1104 122 131 122 120 126 5409 2569 1103 2848 7257 2180 23467 3246 1104 172 1643 1584 117 3694 1107 19377 1107 1940 1665 4718 1105 6986 1107 10437 27558 1183 4834 6211 1116 119 1292 5557 1120 24576 122 131 122 1106 122 131 124 12477 8745 26740 1103 188 10941 10805 5562 11778 1880 1104 1103 3246 119 3335 117 170 4275 6022 1206 122 131 122 120 126 1105 122 131 122 1156 1129 5806 1111 1103 1107 191 2875 2180 2848 7257 2180 23467 2774 1449 1606 1719 1103 170 5526 4267 18404 3442 1137 1103 10437 28117 1116 2093 6451 7706 2774 119 1359 1113 185 7111 1918 2528 4314 9265 2233 1111 172 1643 1584 1105 188 21238 117 2686 1104 1103 1675 2025 1113 2848 7257 2180 23467 3246 1156 1619 1115 1103 6486 21716 22661 1104 172 1643 1584 118 188 21238 1120 1103 4275 24576 1104 122 131 122 1105 123 131 122 1111 1103 1107 4487 7912 2285 1107 17149 1215 1107 179 26519 1179 1105 190 119 188 119 170 119 117 3569 117 1132 5806 119 1103 2629 1104 188 21238 1113 1103 3246 1104 172 1643 1584 1108 1167 3597 1222 7300 1110 14995 1116 1114 3407 1707 7134 1104 11933 118 2495 5822 7363 2217 1190 1222 1343 1114 1750 1707 7134 119 188 21238 120 172 1643 1584 117 1649 117 4252 7340 1174 170 188 10941 10805 5562 2629 1222 102
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:***** Running evaluation *****
+INFO:tensorflow:  Num examples = 415 (415 actual, 0 padding)
+INFO:tensorflow:  Batch size = 8
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Running eval on CPU
+INFO:tensorflow:*** Features ***
+INFO:tensorflow:  name = input_ids, shape = (?, 512)
+INFO:tensorflow:  name = input_mask, shape = (?, 512)
+INFO:tensorflow:  name = is_real_example, shape = (?,)
+INFO:tensorflow:  name = label_ids, shape = (?,)
+INFO:tensorflow:  name = segment_ids, shape = (?, 512)
+INFO:tensorflow:**** Trainable Variables ****
+INFO:tensorflow:  name = bert/embeddings/word_embeddings:0, shape = (28996, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/token_type_embeddings:0, shape = (2, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/position_embeddings:0, shape = (512, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/pooler/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/pooler/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = output_weights:0, shape = (2, 768)
+INFO:tensorflow:  name = output_bias:0, shape = (2,)
+WARNING:tensorflow:From /home/yuning/.pyenv/versions/anaconda3-5.0.1/lib/python3.6/site-packages/tensorflow/python/ops/metrics_impl.py:455: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-05-23T20:52:23Z
+INFO:tensorflow:Graph was finalized.
+2019-05-23 13:52:23.519690: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-23 13:52:23.519719: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-23 13:52:23.519725: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-23 13:52:23.519742: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-23 13:52:23.519810: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7604 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /home/yuning/.pyenv/versions/anaconda3-5.0.1/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt-12435
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2019-05-23-20:52:37
+INFO:tensorflow:Saving dict for global step 12435: eval_accuracy = 0.92771083, eval_loss = 0.34640294, global_step = 12435, loss = 0.34719375
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 12435: /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt-12435
+INFO:tensorflow:evaluation_loop marked as finished
+INFO:tensorflow:***** Eval results *****
+INFO:tensorflow:  eval_accuracy = 0.92771083
+INFO:tensorflow:  eval_loss = 0.34640294
+INFO:tensorflow:  global_step = 12435
+INFO:tensorflow:  loss = 0.34719375
+INFO:tensorflow:Writing example 0 of 415
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: test-1
+INFO:tensorflow:tokens: [CLS] heat - killed l . acid ##op ##hil ##us , strain lb , was tested for its ability to ad ##here in v ##it ##ro onto human enter ##oc ##yte - like ca ##co - 2 and m ##uc ##o - secret ##ing h ##t ##29 - m ##t ##x cells in culture . the heat - killed lb bacteria exhibited a high ad ##hesive property . a di ##ff ##use pattern of ad ##hesion was observed to the und ##iff ##ere ##nti ##ated cells , the a ##pical brush border of the enter ##oc ##ytic cells , and to the m ##uc ##us layer that covered the surface of the m ##uc ##us - secret ##ing cells . the inhibitor ##y effect of heat - killed lb organisms against the human in ##test ##inal ca ##co - 2 cell - ad ##hesion and cell - invasion by a large variety of di ##ar ##r ##hoe ##age ##nic bacteria was investigated . the following dose - dependent in ##hibition ##s were obtained : ( i ) against the cell - association of enter ##oto ##xi ##genic , di ##ff ##use ##ly - ad ##hering and enter ##op ##ath ##ogenic es ##cher ##ichi ##a co ##li , list ##eria mon ##oc ##yt ##ogen ##es , yer ##sin ##ia pseudo ##tub ##er ##cu ##los ##is , and salmon ##ella t ##y ##phi ##mu ##rium ; ( ii ) against the cell - invasion by enter ##op ##ath ##ogenic es ##cher ##ichi ##a co ##li , yer ##sin ##ia pseudo ##tub ##er ##cu ##los ##is , list ##eria mon ##oc ##yt ##ogen ##es and salmon ##ella t ##y ##phi ##mu ##rium . [SEP]
+INFO:tensorflow:input_ids: 101 3208 118 1841 181 119 5190 4184 20473 1361 117 10512 5682 117 1108 7289 1111 1157 2912 1106 8050 12807 1107 191 2875 2180 2135 1769 3873 13335 14300 118 1176 11019 2528 118 123 1105 182 21977 1186 118 3318 1158 177 1204 26752 118 182 1204 1775 3652 1107 2754 119 1103 3208 118 1841 5682 10548 7799 170 1344 8050 23838 2400 119 170 4267 3101 5613 4844 1104 8050 23746 1108 4379 1106 1103 5576 11093 9014 14964 2913 3652 117 1103 170 15328 8415 3070 1104 1103 3873 13335 23894 3652 117 1105 1106 1103 182 21977 1361 6440 1115 2262 1103 2473 1104 1103 182 21977 1361 118 3318 1158 3652 119 1103 27558 1183 2629 1104 3208 118 1841 5682 12023 1222 1103 1769 1107 13053 14196 11019 2528 118 123 2765 118 8050 23746 1105 2765 118 4923 1118 170 1415 2783 1104 4267 1813 1197 10061 2553 7770 10548 1108 10788 119 1103 1378 13753 118 7449 1107 16485 1116 1127 3836 131 113 178 114 1222 1103 2765 118 3852 1104 3873 12355 8745 19438 117 4267 3101 5613 1193 118 8050 23341 1105 3873 4184 9779 17960 13936 6072 11985 1161 1884 2646 117 2190 16386 19863 13335 25669 19790 1279 117 27497 10606 1465 23563 25098 1200 10182 8867 1548 117 1105 17646 7772 189 1183 27008 13601 11077 132 113 25550 114 1222 1103 2765 118 4923 1118 3873 4184 9779 17960 13936 6072 11985 1161 1884 2646 117 27497 10606 1465 23563 25098 1200 10182 8867 1548 117 2190 16386 19863 13335 25669 19790 1279 1105 17646 7772 189 1183 27008 13601 11077 119 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: test-2
+INFO:tensorflow:tokens: [CLS] the aim of this research was to monitor the survival during re ##f ##rig ##erated storage of la ##ct ##ob ##ac ##ill ##us acid ##op ##hil ##us la - 5 ( a ) , bi ##fi ##do ##ba ##cter ##ium animal ##is s ##sp . la ##ct ##is b ##b - 12 ( b ) , and s ##tre ##pt ##oc ##oc ##cus the ##rm ##op ##hil ##us ch ##cc 74 ##2 / 213 ##0 ( t ) in culture ##d dairy foods made from came ##l and , for comparison , cow milk ##s supplemented with black lo ##cus ##t ( robin ##ia pseudo ##aca ##cia l . ) honey and f ##er ##mented by an acid ##op ##hil ##us - bi ##fi ##dus - the ##rm ##op ##hil ##us ( a ##bt ) - type culture . two liter ##s of d ##rome ##dar ##y came ##l milk and 2 l of cow milk were heated to 90 degrees c and held for 10 min , then cooled to 40 degrees c . one half of both types of milk was fortified with black lo ##cus ##t honey at the rate of 5 . 0 % ( w ##t / vol ) , whereas the other half was devoid of honey and served as a control . the came ##l and cow milk ##s with and without honey were subsequently in ##oc ##ulated with a ##bt - 5 culture and were f ##er ##mented at 37 degrees c until a p ##h value of 4 . 6 was reached . thereafter , the pro ##biotic f ##er ##mented milk ##s were cooled to 15 degrees c in ice water and were each separated into 18 fraction ##s that were transferred in s ##ter ##ile , tightly capped cent ##ri ##fu ##ge tubes . after 24 h of cooling at 8 degrees c ( d 0 ) , the samples were stored at re ##f ##rig ##eration temperature ( 4 degrees c ) . three tubes of all 4 products ( i . e . , f ##er ##mented came ##l and cow milk ##s with and without honey ) were taken at each sampling time ( i . e . , following 0 , 7 , 14 , 21 , 28 , and 35 d of storage ) , and the counts of characteristic micro ##or ##gan ##isms and those of certain s ##po ##ila ##ge micro ##bes ( yeast ##s , mold ##s , co ##li ##form ##s , es ##cher ##ichi ##a co ##li ) were en ##ume ##rated . the entire experimental program was repeated twice . the results showed that addition of black lo ##cus ##t honey at 5 % to heat - treated came ##l and cow milk ##s did not influence the growth and survival of starter s ##tre ##pt ##oc ##oc ##ci during production and subsequent re ##f ##rig ##erated storage of f ##er ##mented a ##bt milk ##s . in contrast , honey improved retention of via ##bility of b [SEP]
+INFO:tensorflow:input_ids: 101 1103 6457 1104 1142 1844 1108 1106 8804 1103 8115 1219 1231 2087 17305 20725 5092 1104 2495 5822 12809 7409 7956 1361 5190 4184 20473 1361 2495 118 126 113 170 114 117 16516 8702 2572 2822 25857 3656 3724 1548 188 20080 119 2495 5822 1548 171 1830 118 1367 113 171 114 117 1105 188 7877 6451 13335 13335 6697 1103 9019 4184 20473 1361 22572 19515 5692 1477 120 21640 1568 113 189 114 1107 2754 1181 14874 11785 1189 1121 1338 1233 1105 117 1111 7577 117 13991 6831 1116 22625 1114 1602 25338 6697 1204 113 16763 1465 23563 16604 6052 181 119 114 8531 1105 175 1200 24674 1118 1126 5190 4184 20473 1361 118 16516 8702 15307 118 1103 9019 4184 20473 1361 113 170 21238 114 118 2076 2754 119 1160 27146 1116 1104 173 11457 7858 1183 1338 1233 6831 1105 123 181 1104 13991 6831 1127 9511 1106 3078 4842 172 1105 1316 1111 1275 11241 117 1173 13289 1106 1969 4842 172 119 1141 1544 1104 1241 3322 1104 6831 1108 14149 1114 1602 25338 6697 1204 8531 1120 1103 2603 1104 126 119 121 110 113 192 1204 120 10857 114 117 6142 1103 1168 1544 1108 25755 1104 8531 1105 1462 1112 170 1654 119 1103 1338 1233 1105 13991 6831 1116 1114 1105 1443 8531 1127 2886 1107 13335 8360 1114 170 21238 118 126 2754 1105 1127 175 1200 24674 1120 3413 4842 172 1235 170 185 1324 2860 1104 125 119 127 1108 1680 119 7321 117 1103 5250 22400 175 1200 24674 6831 1116 1127 13289 1106 1405 4842 172 1107 2854 1447 1105 1127 1296 4757 1154 1407 13394 1116 1115 1127 3175 1107 188 2083 4759 117 6852 14510 9848 2047 14703 2176 11182 119 1170 1572 177 1104 12147 1120 129 4842 172 113 173 121 114 117 1103 8025 1127 7905 1120 1231 2087 17305 17166 4143 113 125 4842 172 114 119 1210 11182 1104 1155 125 2982 113 178 119 174 119 117 175 1200 24674 1338 1233 1105 13991 6831 1116 1114 1105 1443 8531 114 1127 1678 1120 1296 18200 1159 113 178 119 174 119 117 1378 121 117 128 117 1489 117 1626 117 1743 117 1105 2588 173 1104 5092 114 117 1105 1103 10664 1104 7987 17599 1766 3820 16762 1105 1343 1104 2218 188 5674 8009 2176 17599 12866 113 25693 1116 117 21532 1116 117 1884 2646 13199 1116 117 13936 6072 11985 1161 1884 2646 114 1127 4035 15447 5894 119 1103 2072 6700 1788 1108 4892 3059 119 1103 2686 2799 1115 1901 1104 1602 25338 6697 1204 8531 1120 126 110 1106 3208 118 5165 1338 1233 1105 13991 6831 1116 1225 1136 2933 1103 3213 1105 8115 1104 12302 188 7877 6451 13335 13335 6617 1219 1707 1105 4194 1231 2087 17305 20725 5092 1104 175 1200 24674 170 21238 6831 1116 119 1107 5014 117 8531 4725 23406 1104 2258 5474 1104 171 102
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: test-3
+INFO:tensorflow:tokens: [CLS] hands are among the principal vehicles for transfer of no ##so ##com ##ial path ##ogen ##s in hospitals . often , outbreak ##s of infection are thought to be caused by a lack of compliance with hand ##wash ##ing guidelines , rather than due to the in ##ade ##qua ##cy of the hand ##wash ##ing agents used . in this study the effectiveness of proper hand ##wash ##ing and the use of three different hand di ##sin ##fect ##ants : ethanol 70 % ( e ) , is ##op ##rop ##ano ##l 40 % ( i ) and alcoholic ch ##lor ##he ##xi ##dine ( 70 % ) ( a ##c ) was compared using three volunteers whose fingertips were heavily contaminated with a succession of bacteria including : other _ species , other _ species , other _ species and ##oth ##er _ species . after each contamination , thorough hand ##wash ##ing and application of one di ##sin ##fect ##ant on the hands were performed three times . finger ##print - samples were taken before and 1 min after application of the di ##sin ##fect ##ants . thorough hand ##wash ##ing with an ordinary liquid soap ( ' s ##ter ##is ##ol ' ) did not reduce the con ##f ##lue ##nt growth of bacteria on fingertips for any of the species used ( 197 examinations ) . only a ##c had a significant effect on fingers heavily contaminated with ##oth ##er _ species ( 126 examinations ; a ##c compared with e and i ; p less than 0 . 000 ##2 and p less than 0 . 000 ##2 respectively ) , but did not completely era ##dicate the bacteria . after contamination with en ##t . c ##lo ##aca ##e ( 118 examinations ) , none of the three agents were particularly effective , but e and a ##c seemed to be somewhat more effective than i ( p less than 0 . 000 ##2 and p less than 0 . 01 respectively ) . when successive contamination was performed using all bacterial species , a ##c was the most effective de ##con ##tam ##ina ##nt . however , en ##t . c ##lo ##aca ##e was still present on the fingertips after 15 repeated courses of hand ##wash ##ing and applications of di ##sin ##fect ##ants . bathing of hands in a ##c for 20 ##s completely era ##dicated all bacteria from the hands . the study demonstrates that , when heavily contaminated , an ordinary hand ##wash ##ing followed by di ##sin ##fect ##ants is not enough to era ##dicate potentially path ##ogenic bacteria from the hands . [SEP]
+INFO:tensorflow:input_ids: 101 1493 1132 1621 1103 3981 4011 1111 4036 1104 1185 7301 8178 2916 3507 19790 1116 1107 8894 119 1510 117 8010 1116 1104 8974 1132 1354 1106 1129 2416 1118 170 2960 1104 14037 1114 1289 24745 1158 13112 117 1897 1190 1496 1106 1103 1107 6397 13284 3457 1104 1103 1289 24745 1158 5789 1215 119 1107 1142 2025 1103 12949 1104 4778 1289 24745 1158 1105 1103 1329 1104 1210 1472 1289 4267 10606 11916 7418 131 27236 3102 110 113 174 114 117 1110 4184 12736 7428 1233 1969 110 113 178 114 1105 16149 22572 10885 4638 8745 10399 113 3102 110 114 113 170 1665 114 1108 3402 1606 1210 8118 2133 12441 1127 3777 21636 1114 170 8705 1104 10548 1259 131 1168 168 1530 117 1168 168 1530 117 1168 168 1530 1105 12858 1200 168 1530 119 1170 1296 20908 117 17213 1289 24745 1158 1105 4048 1104 1141 4267 10606 11916 2861 1113 1103 1493 1127 1982 1210 1551 119 3602 10988 118 8025 1127 1678 1196 1105 122 11241 1170 4048 1104 1103 4267 10606 11916 7418 119 17213 1289 24745 1158 1114 1126 6655 6161 8439 113 112 188 2083 1548 4063 112 114 1225 1136 4851 1103 14255 2087 19224 2227 3213 1104 10548 1113 12441 1111 1251 1104 1103 1530 1215 113 21764 17865 114 119 1178 170 1665 1125 170 2418 2629 1113 2220 3777 21636 1114 12858 1200 168 1530 113 14491 17865 132 170 1665 3402 1114 174 1105 178 132 185 1750 1190 121 119 1288 1477 1105 185 1750 1190 121 119 1288 1477 3569 114 117 1133 1225 1136 2423 3386 12892 1103 10548 119 1170 20908 1114 4035 1204 119 172 2858 16604 1162 113 13176 17865 114 117 3839 1104 1103 1210 5789 1127 2521 3903 117 1133 174 1105 170 1665 1882 1106 1129 4742 1167 3903 1190 178 113 185 1750 1190 121 119 1288 1477 1105 185 1750 1190 121 119 5187 3569 114 119 1165 11598 20908 1108 1982 1606 1155 19560 1530 117 170 1665 1108 1103 1211 3903 1260 7235 20284 2983 2227 119 1649 117 4035 1204 119 172 2858 16604 1162 1108 1253 1675 1113 1103 12441 1170 1405 4892 4770 1104 1289 24745 1158 1105 4683 1104 4267 10606 11916 7418 119 19971 1104 1493 1107 170 1665 1111 1406 1116 2423 3386 17681 1155 10548 1121 1103 1493 119 1103 2025 17798 1115 117 1165 3777 21636 117 1126 6655 1289 24745 1158 1723 1118 4267 10606 11916 7418 1110 1136 1536 1106 3386 12892 9046 3507 17960 10548 1121 1103 1493 119 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: test-4
+INFO:tensorflow:tokens: [CLS] we have examined case records for patients who received te ##ico ##p ##lani ##n alone for end ##oc ##ard ##itis or ##oth ##er _ species b ##act ##era ##emia . all patients with s ##tre ##pt ##oc ##oc ##cal end ##oc ##ard ##itis were cured ( v ##iri ##dan ##s group 14 / 14 ; group d 4 / 4 ) . cure rates for other organisms were : other _ species 3 / 5 ; other _ species 5 / 10 and co ##agu ##lase negative s ##ta ##phy ##loc ##oc ##ci 2 / 3 . doses for six patients who failed because of poor response were 3 . 3 - 4 . 2 mg / kg . te ##ico ##p ##lani ##n treatment cured 41 / 48 patients with ##oth ##er _ species b ##act ##era ##emia ; treatment failed in two patients because of adverse events . doses in the remaining treatment failures were 2 . 1 - 5 . 0 mg / kg . in comparison , 48 patients in du ##nde ##e hospitals received ten different drugs in 20 combinations for ##oth ##er _ species b ##act ##era ##emia ; 29 patients received c ##lo ##xa ##ci ##llin or flu ##c ##lo ##xa ##ci ##llin but initial doses varied from 0 . 25 - 2 . 0 g . we conclude that the euro ##pe ##an database does provide evidence that te ##ico ##p ##lani ##n mon ##otherapy is effective for serious infection with gram - positive bacteria . doses for s ##ta ##phy ##loc ##oc ##cal infection should probably be at least 6 mg / kg . the upper limit of the te ##ico ##p ##lani ##n dos ##age range remains to be determined but there is evidently considerable confusion about appropriate regime ##ns for ' standard ' therapy . [SEP]
+INFO:tensorflow:input_ids: 101 1195 1138 8600 1692 3002 1111 4420 1150 1460 21359 10658 1643 21690 1179 2041 1111 1322 13335 2881 10721 1137 12858 1200 168 1530 171 11179 5970 20504 119 1155 4420 1114 188 7877 6451 13335 13335 7867 1322 13335 2881 10721 1127 24265 113 191 17262 6778 1116 1372 1489 120 1489 132 1372 173 125 120 125 114 119 11200 5600 1111 1168 12023 1127 131 1168 168 1530 124 120 126 132 1168 168 1530 126 120 1275 1105 1884 28026 26572 4366 188 1777 22192 27089 13335 6617 123 120 124 119 24429 1111 1565 4420 1150 2604 1272 1104 2869 2593 1127 124 119 124 118 125 119 123 17713 120 4023 119 21359 10658 1643 21690 1179 3252 24265 3746 120 3615 4420 1114 12858 1200 168 1530 171 11179 5970 20504 132 3252 2604 1107 1160 4420 1272 1104 16798 1958 119 24429 1107 1103 2735 3252 16676 1127 123 119 122 118 126 119 121 17713 120 4023 119 1107 7577 117 3615 4420 1107 3840 11131 1162 8894 1460 1995 1472 5557 1107 1406 16058 1111 12858 1200 168 1530 171 11179 5970 20504 132 1853 4420 1460 172 2858 20192 6617 23824 1137 23896 1665 2858 20192 6617 23824 1133 3288 24429 9177 1121 121 119 1512 118 123 119 121 176 119 1195 17581 1115 1103 27772 3186 1389 8539 1674 2194 2554 1115 21359 10658 1643 21690 1179 19863 20939 1110 3903 1111 3021 8974 1114 25968 118 3112 10548 119 24429 1111 188 1777 22192 27089 13335 7867 8974 1431 1930 1129 1120 1655 127 17713 120 4023 119 1103 3105 5310 1104 1103 21359 10658 1643 21690 1179 18463 2553 2079 2606 1106 1129 3552 1133 1175 1110 20178 5602 6406 1164 5806 6716 2316 1111 112 2530 112 7606 119 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: test-5
+INFO:tensorflow:tokens: [CLS] su ##l ##ba ##ct ##am / c ##ef ##oper ##az ##one ( s ##bt / c ##p ##z ) have been used in clinical in ##fusion at ratios of 1 : 1 and 1 : 2 in j ##apa ##n and u . s . a . , respectively . after an administration of these drugs as a 1 : 1 parent ##eral formulation , the ratio of levels of c ##p ##z and s ##bt in blood was 1 : 1 / 4 to 1 : 1 / 5 for 1 to 2 hours , whereas the ratio of free , un ##bound drug levels was 1 : 1 . 4 to 1 : 1 . 5 . in urine these drugs were ex ##cre ##ted at a ratio between 1 : 1 and 1 : 4 during 6 hours after the in ##fusion . anti ##mic ##ro ##bial interaction studies using various combinations of c ##p ##z and s ##bt were performed to obtain information with respect to the effect of s ##bt on the anti ##mic ##ro ##bial activity of c ##p ##z in v ##ivo and the most appropriate ratio of these drugs for the in v ##it ##ro test system . anti ##mic ##ro ##bial activities were determined using the a ##gar di ##lution method and the disk diffusion su ##s ##ce ##pt ##ibility test . s ##bt increased the activity of c ##p ##z against various clinical is ##olate ##s tested except ##oth ##er _ species . c ##p ##z - s ##bt at a fixed ratio of 1 : 1 / 5 significantly increased the anti ##mic ##ro ##bial activity of c ##p ##z , resulting in decreases in mi ##c values and increases in disk inhibitor ##y zone diameter ##s . these drugs at ratios 1 : 1 to 1 : 3 ma ##xi ##mized the s ##yne ##rg ##istic enhance ##ment of the activity . therefore , a fixed ratio between 1 : 1 / 5 and 1 : 1 would be appropriate for the in v ##it ##ro anti ##mic ##ro ##bial test system using either the a ##gar di ##lution method or the disk su ##s ##ce ##pt ##ibility test . based on p ##har ##ma ##co ##kin ##etic data for c ##p ##z and s ##bt , results of the present study on anti ##mic ##ro ##bial activity would support that the parent ##eral formulation of c ##p ##z - s ##bt at the fixed ratios of 1 : 1 and 2 : 1 for the in ##tra ##ven ##ous in ##fusion used in j ##apa ##n and u . s . a . , respectively , are appropriate . the effect of s ##bt on the activity of c ##p ##z was more marked against clinical is ##olate ##s with greater production abilities of beta - la ##ct ##ama ##se than against those with less production abilities . s ##bt / c ##p ##z , however , ex ##ert ##ed a s ##yne ##rg ##istic effect against [SEP]
+INFO:tensorflow:input_ids: 101 28117 1233 2822 5822 2312 120 172 11470 19807 10961 4798 113 188 21238 120 172 1643 1584 114 1138 1151 1215 1107 7300 1107 17149 1120 24576 1104 122 131 122 1105 122 131 123 1107 179 26519 1179 1105 190 119 188 119 170 119 117 3569 119 1170 1126 3469 1104 1292 5557 1112 170 122 131 122 6486 21716 22661 117 1103 6022 1104 3001 1104 172 1643 1584 1105 188 21238 1107 1892 1108 122 131 122 120 125 1106 122 131 122 120 126 1111 122 1106 123 2005 117 6142 1103 6022 1104 1714 117 8362 8346 3850 3001 1108 122 131 122 119 125 1106 122 131 122 119 126 119 1107 19968 1292 5557 1127 4252 13782 1906 1120 170 6022 1206 122 131 122 1105 122 131 125 1219 127 2005 1170 1103 1107 17149 119 2848 7257 2180 23467 8234 2527 1606 1672 16058 1104 172 1643 1584 1105 188 21238 1127 1982 1106 6268 1869 1114 4161 1106 1103 2629 1104 188 21238 1113 1103 2848 7257 2180 23467 3246 1104 172 1643 1584 1107 191 15435 1105 1103 1211 5806 6022 1104 1292 5557 1111 1103 1107 191 2875 2180 2774 1449 119 2848 7257 2180 23467 2619 1127 3552 1606 1103 170 5526 4267 18404 3442 1105 1103 10437 22873 28117 1116 2093 6451 7706 2774 119 188 21238 2569 1103 3246 1104 172 1643 1584 1222 1672 7300 1110 14995 1116 7289 2589 12858 1200 168 1530 119 172 1643 1584 118 188 21238 1120 170 4275 6022 1104 122 131 122 120 126 5409 2569 1103 2848 7257 2180 23467 3246 1104 172 1643 1584 117 3694 1107 19377 1107 1940 1665 4718 1105 6986 1107 10437 27558 1183 4834 6211 1116 119 1292 5557 1120 24576 122 131 122 1106 122 131 124 12477 8745 26740 1103 188 10941 10805 5562 11778 1880 1104 1103 3246 119 3335 117 170 4275 6022 1206 122 131 122 120 126 1105 122 131 122 1156 1129 5806 1111 1103 1107 191 2875 2180 2848 7257 2180 23467 2774 1449 1606 1719 1103 170 5526 4267 18404 3442 1137 1103 10437 28117 1116 2093 6451 7706 2774 119 1359 1113 185 7111 1918 2528 4314 9265 2233 1111 172 1643 1584 1105 188 21238 117 2686 1104 1103 1675 2025 1113 2848 7257 2180 23467 3246 1156 1619 1115 1103 6486 21716 22661 1104 172 1643 1584 118 188 21238 1120 1103 4275 24576 1104 122 131 122 1105 123 131 122 1111 1103 1107 4487 7912 2285 1107 17149 1215 1107 179 26519 1179 1105 190 119 188 119 170 119 117 3569 117 1132 5806 119 1103 2629 1104 188 21238 1113 1103 3246 1104 172 1643 1584 1108 1167 3597 1222 7300 1110 14995 1116 1114 3407 1707 7134 1104 11933 118 2495 5822 7363 2217 1190 1222 1343 1114 1750 1707 7134 119 188 21238 120 172 1643 1584 117 1649 117 4252 7340 1174 170 188 10941 10805 5562 2629 1222 102
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: 0 (id = 0)
+INFO:tensorflow:***** Running prediction*****
+INFO:tensorflow:  Num examples = 415 (415 actual, 0 padding)
+INFO:tensorflow:  Batch size = 8
+INFO:tensorflow:***** Predict results *****
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Running infer on CPU
+INFO:tensorflow:*** Features ***
+INFO:tensorflow:  name = input_ids, shape = (?, 512)
+INFO:tensorflow:  name = input_mask, shape = (?, 512)
+INFO:tensorflow:  name = is_real_example, shape = (?,)
+INFO:tensorflow:  name = label_ids, shape = (?,)
+INFO:tensorflow:  name = segment_ids, shape = (?, 512)
+INFO:tensorflow:**** Trainable Variables ****
+INFO:tensorflow:  name = bert/embeddings/word_embeddings:0, shape = (28996, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/token_type_embeddings:0, shape = (2, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/position_embeddings:0, shape = (512, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/pooler/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/pooler/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = output_weights:0, shape = (2, 768)
+INFO:tensorflow:  name = output_bias:0, shape = (2,)
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Graph was finalized.
+2019-05-23 13:52:41.337750: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-23 13:52:41.337780: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-23 13:52:41.337785: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-23 13:52:41.337790: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-23 13:52:41.337872: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7604 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from /mnt/storage/projects/cs-273/bert_test/tmp_bioBert_10_epochs/model.ckpt-12435
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:prediction_loop marked as finished
+INFO:tensorflow:prediction_loop marked as finished
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
