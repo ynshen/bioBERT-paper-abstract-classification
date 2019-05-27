@@ -14,8 +14,8 @@ python $BERT_SCRIPT \
 --max_seq_length=512 \
 --train_batch_size=4 \
 --log_step_interval=25 \
+--save_checkpoint_steps=200 \
 --learning_rat=2e-5 \
---num_train_epochs=10.0 \
---output_dir=/mnt/storage/projects/cs-273/bert_res/Bert_10_epochs_test \
+--num_train_epochs=1.0 \
+--output_dir=/mnt/storage/projects/cs-273/bert_res/Bert_1_epochs_test \
 --silent_example=true
-

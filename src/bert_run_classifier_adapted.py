@@ -852,7 +852,7 @@ def main(_):
       "mnli": MnliProcessor,
       "mrpc": MrpcProcessor,
       "xnli": XnliProcessor,
-      "stc": TextClassProcessor
+      "stc": TextClassProcessor # Customized Processor to use
   }
 
   tokenization.validate_case_matches_checkpoint(FLAGS.do_lower_case,
@@ -891,8 +891,8 @@ def main(_):
 
   is_per_host = tf.contrib.tpu.InputPipelineConfig.PER_HOST_V2
   run_config = tf.contrib.tpu.RunConfig(
-      cluster=tpu_cluster_resolver,
-      master=FLAGS.master,
+      cluster=tpu_cluster_resolver, # None
+      master=FLAGS.master, # None
       model_dir=FLAGS.output_dir,
       save_checkpoints_steps=FLAGS.save_checkpoints_steps,
       keep_checkpoint_max=15,
@@ -934,6 +934,7 @@ def main(_):
     train_file = os.path.join(FLAGS.output_dir, "train.tf_record")
     file_based_convert_examples_to_features(
         train_examples, label_list, FLAGS.max_seq_length, tokenizer, train_file)
+    num_actual_train_examples = len(train_examples)
     tf.logging.info("***** Running training *****")
     tf.logging.info("  Num examples = %d", len(train_examples))
     tf.logging.info("  Batch size = %d", FLAGS.train_batch_size)
@@ -943,12 +944,17 @@ def main(_):
         seq_length=FLAGS.max_seq_length,
         is_training=True,
         drop_remainder=True)
+    train_input_fn_to_eval = file_based_input_fn_builder(
+        input_file=train_file,
+        seq_length=FLAGS.max_seq_length,
+        is_training=False,
+        drop_remainder=False)
     # edit
     if FLAGS.do_eval:
       eval_examples = processor.get_dev_examples(FLAGS.data_dir)
       eval_file = os.path.join(FLAGS.output_dir, "eval.tf_record")
       file_based_convert_examples_to_features(
-          eval_examples, label_list, FLAGS.max_seq_length, tokenizer, eval_file)
+        eval_examples, label_list, FLAGS.max_seq_length, tokenizer, eval_file)
       num_actual_eval_examples = len(eval_examples)
       eval_drop_remainder = True if FLAGS.use_tpu else False
       eval_input_fn = file_based_input_fn_builder(
@@ -962,26 +968,42 @@ def main(_):
                       len(eval_examples), num_actual_eval_examples,
                       len(eval_examples) - num_actual_eval_examples)
       tf.logging.info("  Batch size = %d", FLAGS.eval_batch_size)
-      tf.gfile.MakeDirs(FLAGS.output_dir + '/dev_log')
+      tf.gfile.MakeDirs(FLAGS.output_dir + '/train_log')
       round_num = int(num_train_steps / FLAGS.log_step_interval)
-      for ix in range(round_num + 1):
-        estimator.train(input_fn=train_input_fn, max_steps=FLAGS.log_step_interval)
+      end_step_list = [min((round + 1) * FLAGS.log_step_interval, num_train_steps) for round in range(round_num)]
+      for end_step in end_step_list:
+        estimator.train(input_fn=train_input_fn, max_steps=end_step)
         # This tells the estimator to run through the entire set.
+        tf.logging.info("***** Running evaluation on step {} *****".format(end_step))
         eval_steps = None
+        output_train_file = os.path.join(FLAGS.output_dir + '/train_log',
+                                        "train_results_step_{}.txt".format(end_step))
+        result = estimator.predict(input_fn=train_input_fn_to_eval)
+        with tf.gfile.GFile(output_train_file, "w") as writer:
+          num_written_lines = 0
+          for (i, prediction) in enumerate(result):
+            probabilities = prediction["probabilities"]
+            output_line = "\t".join(
+                  str(class_probability)
+                  for class_probability in probabilities) + "\n"
+            writer.write(output_line)
+            num_written_lines += 1
+          assert num_written_lines == num_actual_train_examples
+
+        output_eval_file = os.path.join(FLAGS.output_dir + '/train_log',
+                                         "eval_results_step_{}.txt".format(end_step))
         result = estimator.predict(input_fn=eval_input_fn)
-        tf.logging.info("***** Running evaluation on step {} *****".format((ix + 1) * FLAGS.log_step_interval))
-        output_eval_file = os.path.join(FLAGS.output_dir + '/dev_log',
-                                        "eval_results_step_{}.txt".format((ix + 1) * FLAGS.log_step_interval))
         with tf.gfile.GFile(output_eval_file, "w") as writer:
           num_written_lines = 0
           for (i, prediction) in enumerate(result):
             probabilities = prediction["probabilities"]
             output_line = "\t".join(
-                str(class_probability)
-                for class_probability in probabilities) + "\n"
+              str(class_probability)
+              for class_probability in probabilities) + "\n"
             writer.write(output_line)
             num_written_lines += 1
-        assert num_written_lines == num_actual_eval_examples
+          assert num_written_lines == num_actual_eval_examples
+
 
   if FLAGS.do_eval:
     eval_examples = processor.get_dev_examples(FLAGS.data_dir)
