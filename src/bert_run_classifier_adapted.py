@@ -60,6 +60,9 @@ flags.DEFINE_integer("log_step_interval", 500, "The step interval for logging me
 
 flags.DEFINE_bool("silent_example", True, "If print example data")
 
+flags.DEFINE_float("positive_percent", None, "If to weight data with each class in training, weight calcualted from"
+                                             "positive percent.")
+
 # Other parameters
 # In this project we will only use 'stc'
 flags.DEFINE_string("task_name", 'stc', "The name of the task to train. "
@@ -88,7 +91,7 @@ flags.DEFINE_bool(
     "do_predict", False,
     "Whether to run the model in inference mode on the test set.")
 
-flags.DEFINE_integer("train_batch_size", 4, "Total batch size for training.")
+flags.DEFINE_integer("train_batch_size", 8, "Total batch size for training.")
 
 flags.DEFINE_integer("eval_batch_size", 8, "Total batch size for eval.")
 
@@ -213,7 +216,7 @@ class DataProcessor(object):
             reader = csv.reader(f, delimiter="\t", quotechar=quotechar)
             lines = []
             for line in reader:
-              lines.append(line)
+                lines.append(line)
         return lines
 
 
@@ -258,47 +261,6 @@ class TextClassProcessor(DataProcessor):
                 text_a = tokenization.convert_to_unicode(line[1])
                 label = tokenization.convert_to_unicode(line[0])
             examples.append(InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
-        return examples
-
-
-class ColaProcessor(DataProcessor):
-    """Processor for the CoLA data set (GLUE version). Not used in this project"""
-
-    def get_train_examples(self, data_dir):
-        """See base class."""
-        return self._create_examples(
-            self._read_tsv(os.path.join(data_dir, "train.tsv")), "train")
-
-    def get_dev_examples(self, data_dir):
-        """See base class."""
-        return self._create_examples(
-            self._read_tsv(os.path.join(data_dir, "dev.tsv")), "dev")
-
-    def get_test_examples(self, data_dir):
-        """See base class."""
-        return self._create_examples(
-            self._read_tsv(os.path.join(data_dir, "test.tsv")), "test")
-
-    def get_labels(self):
-        """See base class."""
-        return ["0", "1"]
-
-    def _create_examples(self, lines, set_type):
-        """Creates examples for the training and dev sets."""
-        examples = []
-        for (i, line) in enumerate(lines):
-            # Only the test set has a header
-            if set_type == "test" and i == 0:
-                continue
-            guid = "%s-%s" % (set_type, i)
-            if set_type == "test":
-                text_a = tokenization.convert_to_unicode(line[1])
-                label = "0"
-            else:
-                text_a = tokenization.convert_to_unicode(line[3])
-                label = tokenization.convert_to_unicode(line[1])
-            examples.append(
-                InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
         return examples
 
 
@@ -565,10 +527,16 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
         probabilities = tf.nn.softmax(logits, axis=-1)
         log_probs = tf.nn.log_softmax(logits, axis=-1)
 
-        one_hot_labels = tf.one_hot(labels, depth=num_labels, dtype=tf.float32)
-
+        one_hot_labels = tf.one_hot(labels, depth=num_labels, dtype=tf.float32)  # [batch, num_labels]
         per_example_loss = -tf.reduce_sum(one_hot_labels * log_probs, axis=-1)
-        loss = tf.reduce_mean(per_example_loss)
+        if (FLAGS.positive_percent is not None) and (one_hot_labels.shape[0].value is not None):
+            class_prob = tf.constant([1/FLAGS.positive_percent, 1/(1 - FLAGS.positive_percent)])
+            multiple = tf.constant([one_hot_labels.shape[0].value])
+            label_prob = tf.reshape(tf.tile(input=class_prob, multiples=multiple), one_hot_labels.shape)
+            weights = tf.reduce_sum(one_hot_labels * label_prob, axis=-1)
+            loss = tf.reduce_mean(per_example_loss * weights)
+        else:
+            loss = tf.reduce_mean(per_example_loss)
 
     return (loss, per_example_loss, logits, probabilities)
 
@@ -626,9 +594,56 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
                             init_string)
 
         output_spec = None
+
+        def metric_fn(per_example_loss, label_ids, logits, is_real_example):
+            predictions = tf.argmax(logits, axis=-1, output_type=tf.int32)
+            accuracy = tf.metrics.accuracy(
+                labels=label_ids, predictions=predictions, weights=is_real_example
+            )
+            precision = tf.metrics.precision(
+                labels=label_ids, predictions=predictions, weights=is_real_example
+            )
+            recall = tf.metrics.recall(
+                labels=label_ids, predictions=predictions, weights=is_real_example
+            )
+            false_negatives = tf.metrics.false_negatives(
+                labels=label_ids, predictions=predictions, weights=is_real_example
+            )
+            false_positives = tf.metrics.false_positives(
+                labels=label_ids, predictions=predictions, weights=is_real_example
+            )
+            mean_loss = tf.metrics.mean(values=per_example_loss, weights=is_real_example)
+            roc_auc_min = tf.metrics.auc(
+                labels=label_ids, predictions=predictions, weights=is_real_example, summation_method='minoring'
+            )
+            roc_auc_max = tf.metrics.auc(
+                labels=label_ids, predictions=predictions, weights=is_real_example, summation_method='majoring'
+            )
+
+            return {
+                "accuracy": accuracy,
+                "mean_loss": mean_loss,
+                "precision": precision,
+                "recall": recall,
+                "false_negatives": false_negatives,
+                "false_positives": false_positives,
+                "roc_auc_min": roc_auc_min,
+                "roc_auc_max": roc_auc_max
+            }
+
         if mode == tf.estimator.ModeKeys.TRAIN:
             train_op = optimization.create_optimizer(
-                total_loss, learning_rate, num_train_steps, num_warmup_steps, use_tpu)
+                total_loss, learning_rate, num_train_steps, num_warmup_steps, use_tpu
+            )
+            metric = metric_fn(per_example_loss, label_ids, logits, is_real_example)
+            tf.summary.scalar('accuracy', metric['accuracy'][1])
+            tf.summary.scalar('mean_loss', metric['mean_loss'][1])
+            tf.summary.scalar('precision', metric['precision'][1])
+            tf.summary.scalar('recall', metric['recall'][1])
+            tf.summary.scalar('false_negatives', metric['false_negatives'][1])
+            tf.summary.scalar('false_positives', metric['false_positives'][1])
+            tf.summary.scalar('roc_auc_min', metric['roc_auc_min'][1])
+            tf.summary.scalar('roc_auc_max', metric['roc_auc_max'][1])
 
             output_spec = tf.contrib.tpu.TPUEstimatorSpec(
                 mode=mode,
@@ -637,17 +652,15 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
                 scaffold_fn=scaffold_fn
             )
         elif mode == tf.estimator.ModeKeys.EVAL:
-
-            def metric_fn(per_example_loss, label_ids, logits, is_real_example):
-                predictions = tf.argmax(logits, axis=-1, output_type=tf.int32)
-                accuracy = tf.metrics.accuracy(
-                    labels=label_ids, predictions=predictions, weights=is_real_example
-                )
-                loss = tf.metrics.mean(values=per_example_loss, weights=is_real_example)
-                return {
-                    "eval_accuracy": accuracy,
-                    "eval_loss": loss,
-                }
+            metric = metric_fn(per_example_loss, label_ids, logits, is_real_example)
+            tf.summary.scalar('accuracy', metric['accuracy'][1])
+            tf.summary.scalar('mean_loss', metric['mean_loss'][1])
+            tf.summary.scalar('precision', metric['precision'][1])
+            tf.summary.scalar('recall', metric['recall'][1])
+            tf.summary.scalar('false_negatives', metric['false_negatives'][1])
+            tf.summary.scalar('false_positives', metric['false_positives'][1])
+            tf.summary.scalar('roc_auc_min', metric['roc_auc_min'][1])
+            tf.summary.scalar('roc_auc_max', metric['roc_auc_max'][1])
 
             eval_metrics = (metric_fn,
                             [per_example_loss, label_ids, logits, is_real_example])
@@ -689,7 +702,7 @@ def main(_):
     tf.logging.set_verbosity(tf.logging.INFO)
 
     processors = {
-        "cola": ColaProcessor,  # preserve for test
+        # "cola": ColaProcessor,  # preserved for test -> not anymore
         # "mnli": MnliProcessor,
         # "mrpc": MrpcProcessor,
         # "xnli": XnliProcessor,
@@ -731,6 +744,7 @@ def main(_):
         master=FLAGS.master, # None
         model_dir=FLAGS.output_dir,
         save_checkpoints_steps=FLAGS.save_checkpoints_steps,
+        save_summary_steps=FLAGS.log_step_interval,
         keep_checkpoint_max=15,
         tpu_config=tf.contrib.tpu.TPUConfig(
             iterations_per_loop=FLAGS.iterations_per_loop,
@@ -770,8 +784,7 @@ def main(_):
 
     if FLAGS.do_train:
         train_file = os.path.join(FLAGS.output_dir, "train.tf_record")
-        file_based_convert_examples_to_features(
-            train_examples, label_list, FLAGS.max_seq_length, tokenizer, train_file)
+        file_based_convert_examples_to_features(train_examples, label_list, FLAGS.max_seq_length, tokenizer, train_file)
         # num_actual_train_examples = len(train_examples)
         tf.logging.info("***** Running training *****")
         tf.logging.info("  Num examples = %d", len(train_examples))
@@ -782,13 +795,9 @@ def main(_):
             seq_length=FLAGS.max_seq_length,
             is_training=True,
             drop_remainder=True)
-        train_input_fn_to_eval = file_based_input_fn_builder(
-            input_file=train_file,
-            seq_length=FLAGS.max_seq_length,
-            is_training=False,
-            drop_remainder=False)
         # edited
         if FLAGS.do_eval:
+            # Use estimator.train_and_eval
             eval_examples = processor.get_dev_examples(FLAGS.data_dir)
             eval_file = os.path.join(FLAGS.output_dir, "eval.tf_record")
             file_based_convert_examples_to_features(
@@ -807,42 +816,23 @@ def main(_):
                             len(eval_examples), num_actual_eval_examples,
                             len(eval_examples) - num_actual_eval_examples)
             tf.logging.info("  Batch size = %d", FLAGS.eval_batch_size)
-            tf.gfile.MakeDirs(FLAGS.output_dir + '/train_log')
-            round_num = int(num_train_steps / FLAGS.log_step_interval)
-            end_step_list = [min((round + 1) * FLAGS.log_step_interval, num_train_steps) for round in range(round_num)]
-            for end_step in end_step_list:
-                estimator.train(input_fn=train_input_fn, max_steps=end_step)
-                # This tells the estimator to run through the entire set.
-                tf.logging.info("***** Running evaluation on step {} *****".format(end_step))
-                eval_steps = None
-                output_train_file = os.path.join(FLAGS.output_dir + '/train_log',
-                                                 "train_results_step_{}.txt".format(end_step))
-                result = estimator.predict(input_fn=train_input_fn_to_eval)
-                with tf.gfile.GFile(output_train_file, "w") as writer:
-                    num_written_lines = 0
-                    for (i, prediction) in enumerate(result):
-                        probabilities = prediction["probabilities"]
-                        output_line = "\t".join(
-                            str(class_probability)
-                            for class_probability in probabilities) + "\n"
-                        writer.write(output_line)
-                        num_written_lines += 1
-                    assert num_written_lines == num_actual_train_examples
+            train_spec = tf.estimator.TrainSpec(
+                input_fn=train_input_fn,
+                max_steps=num_train_steps
+            )
+            eval_spec = tf.estimator.EvalSpec(
+                eval_input_fn,
+                steps=None,
+                start_delay_secs=20,
+                throttle_secs=40
+            )
 
-            output_eval_file = os.path.join(FLAGS.output_dir + '/train_log',
-                                           "eval_results_step_{}.txt".format(end_step))
-            result = estimator.predict(input_fn=eval_input_fn)
-            with tf.gfile.GFile(output_eval_file, "w") as writer:
-                num_written_lines = 0
-                for (i, prediction) in enumerate(result):
-                    probabilities = prediction["probabilities"]
-                    output_line = "\t".join(str(class_probability) for class_probability in probabilities) + "\n"
-                    writer.write(output_line)
-                    num_written_lines += 1
-                assert num_written_lines == num_actual_eval_examples
-
-
-    if FLAGS.do_eval:
+            tf.estimator.train_and_evaluate(estimator=estimator, train_spec=train_spec, eval_spec=eval_spec)
+        else:
+            # if only do training
+            estimator.train(input_fn=train_input_fn, max_steps=num_train_steps)
+    elif FLAGS.do_eval:
+        # If only do evaluation
         eval_examples = processor.get_dev_examples(FLAGS.data_dir)
         num_actual_eval_examples = len(eval_examples)
         if FLAGS.use_tpu:
