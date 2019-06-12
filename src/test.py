@@ -1,3 +1,8 @@
+"""
+Test for package import
+"""
+
+
 try:
     import ref.bert.modeling
 except:

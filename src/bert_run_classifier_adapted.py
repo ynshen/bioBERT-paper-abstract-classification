@@ -573,17 +573,22 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
         initialized_variable_names = {}
         scaffold_fn = None
         if init_checkpoint:
+            # change to use the latest checkpoint
+            if tf.train.latest_checkpoint(init_checkpoint) is not None:
+                checkpoint_to_use = tf.train.latest_checkpoint(init_checkpoint)
+            else:
+                checkpoint_to_use = init_checkpoint
             (assignment_map, initialized_variable_names
-             ) = modeling.get_assignment_map_from_checkpoint(tvars, init_checkpoint)
+             ) = modeling.get_assignment_map_from_checkpoint(tvars, checkpoint_to_use)
             if use_tpu:
 
                 def tpu_scaffold():
-                    tf.train.init_from_checkpoint(init_checkpoint, assignment_map)
+                    tf.train.init_from_checkpoint(checkpoint_to_use, assignment_map)
                     return tf.train.Scaffold()
 
                 scaffold_fn = tpu_scaffold
             else:
-                tf.train.init_from_checkpoint(init_checkpoint, assignment_map)
+                tf.train.init_from_checkpoint(checkpoint_to_use, assignment_map)
 
         tf.logging.info("**** Trainable Variables ****")
         for var in tvars:
@@ -677,7 +682,6 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
                 scaffold_fn=scaffold_fn
             )
         return output_spec
-
     return model_fn
 
 
@@ -708,6 +712,8 @@ def main(_):
         # "xnli": XnliProcessor,
         "stc": TextClassProcessor # Customized Processor to use
     }
+
+    print(FLAGS.init_checkpoint)
 
     tokenization.validate_case_matches_checkpoint(FLAGS.do_lower_case,
                                                   FLAGS.init_checkpoint)
@@ -816,6 +822,9 @@ def main(_):
                             len(eval_examples), num_actual_eval_examples,
                             len(eval_examples) - num_actual_eval_examples)
             tf.logging.info("  Batch size = %d", FLAGS.eval_batch_size)
+
+            ## TODO: Add tf.estimator.Exporter to save best models
+
             train_spec = tf.estimator.TrainSpec(
                 input_fn=train_input_fn,
                 max_steps=num_train_steps

@@ -1,3 +1,8 @@
+"""
+Some utility function
+"""
+
+
 def progress_bar(pct):
     import sys
     sys.stdout.write('\r')
@@ -5,6 +10,7 @@ def progress_bar(pct):
     bar_num = int(round(pct * 20))
     sys.stdout.write("[%-20s] %d%%" % ('='*bar_num, pct*100))
     sys.stdout.flush()
+
 
 def progress_checkpoint(proLen):
     return [round(proLen/50*i) for i in range(51)]
@@ -48,18 +54,6 @@ def dump_pickle(data, dirc, log, overwrite):
             logFile.write(log)
         print('Data has been saved to %s' %dirc)
 
-
-class color:
-    PURPLE = '\033[95m'
-    CYAN = '\033[96m'
-    DARKCYAN = '\033[36m'
-    BLUE = '\033[94m'
-    GREEN = '\033[92m'
-    YELLOW = '\033[93m'
-    RED = '\033[91m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-    END = '\033[0m'
 
 def extract_metadata(target, pattern):
     """

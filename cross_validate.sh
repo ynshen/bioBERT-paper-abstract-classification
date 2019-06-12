@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+# export BERT_BASE_DIR=/mnt/storage/projects/cs-273/bert_pretrained/uncased_L-12_H-768_A-12
 export BERT_BASE_DIR=/mnt/storage/projects/cs-273/bert_pretrained/biobert_v1.1_pubmed
+# export CHECKPOINT_NAME=bert_model.ckpt
 export CHECKPOINT_NAME=model.ckpt-1000000
 export BERT_SCRIPT=/home/yuning/Work/cs-273/src/bert_run_classifier_adapted.py
 for SET in 1 2 3 4 5
@@ -19,8 +21,8 @@ do
     --log_step_interval=50 \
     --save_checkpoints_steps=100 \
     --learning_rate=2e-5 \
-    --num_train_epochs=8.0 \
-    --output_dir=/mnt/storage/projects/cs-273/bert_cv/BioBert_8_epoch_weighted/set_$SET \
+    --num_train_epochs=10.0 \
+    --output_dir=/mnt/storage/projects/cs-273/bert_cv/BioBert_10_epoch_weighted/set_$SET \
     --silent_example=true \
     --positive_percent=.07459 \
     --cross_validate=true

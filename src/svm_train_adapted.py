@@ -3,8 +3,8 @@
 __author__ = "Yuning Shen"
 
 """
-Script for SVM classifier, adapted from @MInter for new data format and cleaned dataset.
-Same set-up for repeating results	
+Script for SVM classifier, same model from @MInter for new data format and cleaned dataset.
+Same flag setup for repeating results	
 """
 
 import argparse
@@ -27,6 +27,7 @@ def boolean_arg(s):
         return True
     else:
         raise ValueError('Not a valid boolean string')
+
 
 class TsvReader(object):
 
@@ -68,24 +69,35 @@ def main():
     # print(svm_classifier.get_params())
 
     if ARGS.cross_validate:
-        for ix,cv_set in enumerate(glob.glob(ARGS.data_dir + '/set*')):
-            print("--------------------------set {}----------------------------".format(ix + 1))
+        for cv_set in glob.glob(ARGS.data_dir + '/set*'):
+            ix = int(cv_set[-1:])
+            print("--------------------------set {}----------------------------".format(ix))
+            print("Read data from {}".format(cv_set))
             train = TsvReader.from_tsv(tsv_dir=cv_set + '/train.tsv')
             print('Model training...')
             svm_classifier.fit(train.features, train.labels)
-            util.dump_pickle(svm_classifier, ARGS.output + '/cv_model_set_{}'.format(ix + 1),
-                             log='SVM model classifier from cross validation set {}'.format(ix + 1),
+            util.dump_pickle(svm_classifier, ARGS.output + '/cv_model_set_{}'.format(ix),
+                             log='SVM model classifier from cross validation set {}'.format(ix),
                              overwrite=True)
-            print('\tTraining finished. Model saved to {}'.format(ARGS.output + '/cv_model_set_{}'.format(ix + 1)))
+            print('\tTraining finished. Model saved to {}'.format(ARGS.output + '/cv_model_set_{}'.format(ix)))
             if ARGS.prediction:
                 print('Predict on test set...')
                 test = TsvReader.from_tsv(tsv_dir=cv_set + '/dev.tsv')
-                prediction = svm_classifier.predict(test.features)
-                with open(ARGS.output + '/cv_test_pred_set_{}.txt'.format(ix + 1), 'w') as handle:
-                    for pred in prediction:
-                        handle.write('{}\n'.format(int(pred)))
-                print('\tPrediction finished. Result saved to {}'.format(ARGS.output +
-                                                                         '/cv_test_pred_set_{}'.format(ix + 1)))
+                if ARGS.predict_prob:
+                    prediction = svm_classifier.predict_proba(test.features)
+                    # pdb.set_trace()
+                    np.savetxt(ARGS.output + '/cv_test_pred_prob_set_{}.txt'.format(ix),
+                               prediction,
+                               delimiter='\t')
+                    print('\tPrediction finished. Result saved to {}'.format(ARGS.output +
+                                                                             '/cv_test_pred_prob_set_{}.txt'.format(ix)))
+                else:
+                    prediction = svm_classifier.predict(test.features)
+                    with open(ARGS.output + '/cv_test_pred_set_{}.txt'.format(ix), 'w') as handle:
+                        for pred in prediction:
+                            handle.write('{}\n'.format(int(pred)))
+                    print('\tPrediction finished. Result saved to {}'.format(ARGS.output +
+                                                                             '/cv_test_pred_set_{}.txt'.format(ix)))
     else:
         print("Import training data...")
         if ARGS.training_data is not None:
@@ -103,6 +115,13 @@ def main():
             print('Predict on test set...')
             test = TsvReader.from_tsv(tsv_dir=ARGS.data_dir + '/test.tsv')
             # pdb.set_trace()
+            if ARGS.predict_prob:
+                prediction = svm_classifier.predict_proba(test.features)
+                np.savetxt(ARGS.output + '/test_pred_prob.txt',
+                           prediction,
+                           delimiter='\t')
+                print('\tPrediction finished. Result saved to {}'.format(ARGS.output + '/test_pred_prob.txt'))
+        else:
             prediction = svm_classifier.predict(test.features)
             with open(ARGS.output + '/test_pred.txt', 'w') as handle:
                 for pred in prediction:
@@ -120,6 +139,7 @@ if __name__ == "__main__":
     parser.add_argument("-T", '--training_data', type = str, help="Set a .tsv file for training", default = None)
     parser.add_argument("-p", '--prediction', type = boolean_arg, default = True)
     parser.add_argument("-w", '--weighted_training', type = boolean_arg, default = True)
+    parser.add_argument("-P", "--predict_prob", type = boolean_arg, default=False)
     ARGS = parser.parse_args()
     print("Arguements:\n{}".format(ARGS))
     main()
