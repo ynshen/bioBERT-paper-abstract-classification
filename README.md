@@ -26,7 +26,26 @@
 
 #### Source code to run
 
-`svm_train_adapted.py` python code for BoW+SVM model training
+`src/svm_train_adapted.py` python code for BoW+SVM model training
 
-`bert_run_classifier_adapted.py` python code for BERT model training, modified from bert's
+`src/bert_run_classifier_adapted.py` python code for BERT model training, modified from BERT's `run_classifier.py` add function of 
+ - Tracking training process
+ - Option to conduct cross validation
+ - Option to use weighted loss function
+
+`src/preprocesssing.py`, `src/util.py`, `src/test.py`: some other utility functions for the project
+
+#### Training experiment log
+- Saved under `exp_logs`
+
+#### Figures
+- Saved under `figs`
+
+#### Dependent packages
+Under `src/ref`, for unknown reason, these folders are not be able to upload, here are links to the original repo:
+- [atmister](https://github.com/CSB5/atminter)
+- [bert](https://github.com/google-research/bert)
+
+#### Trained model and data
+Due to storage constrains, trained model and data are still stored off-line on local machine. They will be provided per request to yuningshen@gmail.com
 
