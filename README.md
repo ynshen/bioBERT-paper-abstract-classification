@@ -46,6 +46,6 @@ Under `src/ref`, for unknown reason, these folders are not be able to upload, he
 - [atmister](https://github.com/CSB5/atminter)
 - [bert](https://github.com/google-research/bert)
 
-#### Trained model and data
-Due to storage constrains, trained model and data are still stored off-line on local machine. They will be provided per request to yuningshen@gmail.com
+#### Trained models and data
+Due to storage constrains, trained models and data are still stored off-line on local machine. They will be provided per request to yuningshen@ucsb.edu
 
